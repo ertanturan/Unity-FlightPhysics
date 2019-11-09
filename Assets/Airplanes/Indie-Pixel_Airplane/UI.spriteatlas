@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 54b3bae8158903f45a2965cc69953802, type: 3}
+    totalSpriteSurfaceArea: 1398784
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 5f809101f5db3694081f80c67ad23186, type: 3}
+  - {fileID: 21300000, guid: 2ba29fe21ac2fb24d85becd5178a5a5b, type: 3}
+  - {fileID: 21300000, guid: 30165d93ebe53514b9d02c30b4d4dfba, type: 3}
+  - {fileID: 21300000, guid: 89f61d44caabe074c95754a888156c75, type: 3}
+  - {fileID: 21300000, guid: 610d4c68f3dec834e91bc617f28f7f2e, type: 3}
+  - {fileID: 21300000, guid: b2f22dfeab0f54d4696e5589678fbf7b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - mobile_flapsdwn_btn
+  - mobile_camera_btn
+  - mobile_thumbstick_outer_circle
+  - mobile_flapsup_btn
+  - mobile_thumbstick
+  - mobile_brake_btn
+  m_Tag: UI
+  m_IsVariant: 0

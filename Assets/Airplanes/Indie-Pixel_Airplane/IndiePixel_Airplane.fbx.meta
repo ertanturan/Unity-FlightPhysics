@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 0a5b6c85101505647b87da703d0ae99a
+timeCreated: 1525546528
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Airplane_GEO
+    100002: Back_Wheel_GEO
+    100004: ControlSurfaces_GRP
+    100006: Elevator_GEO
+    100008: //RootNode
+    100010: L_Aileron_GEO
+    100012: L_Flap_GEO
+    100014: L_Mechanism_01_GEO
+    100016: L_Mechanism_02_GEO
+    100018: L_Mechanism_03_GEO
+    100020: L_Mechanism_04_GEO
+    100022: L_Wheel_GEO
+    100024: polySurface2
+    100026: Propellers_GEO
+    100028: R_Aileron_GEO
+    100030: R_Flap_GEO
+    100032: R_Mechanism_01_GEO
+    100034: R_Mechanism_02_GEO
+    100036: R_Mechanism_03_GEO
+    100038: R_Mechanism_04_GEO
+    100040: R_Wheel_GEO
+    100042: Rudder_GEO
+    100044: Spinner_GEO
+    100046: Wheels_GRP
+    400000: Airplane_GEO
+    400002: Back_Wheel_GEO
+    400004: ControlSurfaces_GRP
+    400006: Elevator_GEO
+    400008: //RootNode
+    400010: L_Aileron_GEO
+    400012: L_Flap_GEO
+    400014: L_Mechanism_01_GEO
+    400016: L_Mechanism_02_GEO
+    400018: L_Mechanism_03_GEO
+    400020: L_Mechanism_04_GEO
+    400022: L_Wheel_GEO
+    400024: polySurface2
+    400026: Propellers_GEO
+    400028: R_Aileron_GEO
+    400030: R_Flap_GEO
+    400032: R_Mechanism_01_GEO
+    400034: R_Mechanism_02_GEO
+    400036: R_Mechanism_03_GEO
+    400038: R_Mechanism_04_GEO
+    400040: R_Wheel_GEO
+    400042: Rudder_GEO
+    400044: Spinner_GEO
+    400046: Wheels_GRP
+    2100000: Default_Airplane_MAT
+    2300000: Airplane_GEO
+    2300002: Back_Wheel_GEO
+    2300004: Elevator_GEO
+    2300006: L_Aileron_GEO
+    2300008: L_Flap_GEO
+    2300010: L_Mechanism_01_GEO
+    2300012: L_Mechanism_02_GEO
+    2300014: L_Mechanism_03_GEO
+    2300016: L_Mechanism_04_GEO
+    2300018: L_Wheel_GEO
+    2300020: polySurface2
+    2300022: R_Aileron_GEO
+    2300024: R_Flap_GEO
+    2300026: R_Mechanism_01_GEO
+    2300028: R_Mechanism_02_GEO
+    2300030: R_Mechanism_03_GEO
+    2300032: R_Mechanism_04_GEO
+    2300034: R_Wheel_GEO
+    2300036: Rudder_GEO
+    2300038: Spinner_GEO
+    3300000: Airplane_GEO
+    3300002: Back_Wheel_GEO
+    3300004: Elevator_GEO
+    3300006: L_Aileron_GEO
+    3300008: L_Flap_GEO
+    3300010: L_Mechanism_01_GEO
+    3300012: L_Mechanism_02_GEO
+    3300014: L_Mechanism_03_GEO
+    3300016: L_Mechanism_04_GEO
+    3300018: L_Wheel_GEO
+    3300020: polySurface2
+    3300022: R_Aileron_GEO
+    3300024: R_Flap_GEO
+    3300026: R_Mechanism_01_GEO
+    3300028: R_Mechanism_02_GEO
+    3300030: R_Mechanism_03_GEO
+    3300032: R_Mechanism_04_GEO
+    3300034: R_Wheel_GEO
+    3300036: Rudder_GEO
+    3300038: Spinner_GEO
+    4300000: Airplane_GEO
+    4300002: Spinner_GEO
+    4300004: polySurface2
+    4300006: Rudder_GEO
+    4300008: Elevator_GEO
+    4300010: L_Flap_GEO
+    4300012: L_Aileron_GEO
+    4300014: L_Mechanism_01_GEO
+    4300016: L_Mechanism_02_GEO
+    4300018: L_Mechanism_03_GEO
+    4300020: L_Mechanism_04_GEO
+    4300022: R_Flap_GEO
+    4300024: R_Aileron_GEO
+    4300026: R_Mechanism_01_GEO
+    4300028: R_Mechanism_02_GEO
+    4300030: R_Mechanism_03_GEO
+    4300032: R_Mechanism_04_GEO
+    4300034: Back_Wheel_GEO
+    4300036: R_Wheel_GEO
+    4300038: L_Wheel_GEO
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default_Airplane_MAT
+    second: {fileID: 2100000, guid: 4d0afa186ed9a7f48b9404b430babf60, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
