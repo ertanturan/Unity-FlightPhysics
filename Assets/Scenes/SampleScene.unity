@@ -220,7 +220,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100008, guid: 0a5b6c85101505647b87da703d0ae99a, type: 3}
       propertyPath: m_Name
-      value: IndiePixel_Airplane
+      value: n7370m
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 0a5b6c85101505647b87da703d0ae99a, type: 3}
       propertyPath: m_LocalPosition.x
