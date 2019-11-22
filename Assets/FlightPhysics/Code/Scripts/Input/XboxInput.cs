@@ -1,18 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using FlightPhysics.BaseInput;
-
-
-public class XboxInput : MonoBehaviour
+﻿namespace FlightPhysics.Input
 {
-    private void Start()
+
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class XboxInput : MonoBehaviour
     {
 
-    }
+        private BaseInput _input;
 
-    private void Update()
-    {
+        private void Start()
+        {
 
+        }
+
+        private void Update()
+        {
+
+        }
     }
 }
+
