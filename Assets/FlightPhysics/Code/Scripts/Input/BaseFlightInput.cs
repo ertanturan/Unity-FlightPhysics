@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using UnityEngine;
 
-    public class BaseInput : MonoBehaviour
+    public class BaseFlightInput : MonoBehaviour
     {
         public KeyCode BrakeKey = KeyCode.Space;
 

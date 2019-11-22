@@ -1,14 +1,14 @@
-﻿namespace FlightPhysics.Input
-{
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-    using System.Collections;
-    using System.Collections.Generic;
-    using UnityEngine;
+namespace FlightPhysics.Input
+{
 
     public class XboxInput : MonoBehaviour
     {
 
-        private BaseInput _input;
+        private BaseFlightInput _flightInput;
 
         private void Start()
         {
