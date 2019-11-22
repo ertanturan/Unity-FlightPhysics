@@ -2,17 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseInput : MonoBehaviour
+namespace FlightPhysics.BaseInput
 {
-    // Start is called before the first frame update
-    void Start()
+    public class BaseInput : MonoBehaviour
     {
-        
-    }
+        #region Fields
+        public float Pitch = 0f;
+        public float Roll = 0f;
+        public float Yaw = 0f;
+        public float Throttle = 0f;
+        public int Flaps = 0;
+        public float Brake = 0f;
+        #endregion
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+        #region BuiltIn Methods
+
+        private void Start()
+        {
+
+        }
+
+        private void Update()
+        {
+
+        }
+
+        #endregion
+
     }
 }
+
