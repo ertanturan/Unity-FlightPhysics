@@ -6,12 +6,15 @@
 
     public class BaseInput : MonoBehaviour
     {
+        public KeyCode BrakeKey = KeyCode.Space;
+
         #region Fields
         protected float pitch = 0f;
         protected float roll = 0f;
         protected float yaw = 0f;
         protected float throttle = 0f;
         protected int flaps = 0;
+        public int MaxFlapIncrements=2;
         protected float brake = 0f;
         #endregion
 
@@ -41,10 +44,27 @@
         #region Custom Methods
         public virtual void HandleInput()
         {
+            //Main controls
             pitch = Input.GetAxis("Vertical");
             roll = Input.GetAxis("Horizontal");
+            yaw = Input.GetAxis("Yaw");
+            throttle = Input.GetAxis("Throttle");
 
-            Debug.Log("Pitch : "+pitch+" - "+"Roll : "+roll);
+            //Brakes
+            brake = Input.GetKey(BrakeKey) ? 1f : 0f;
+
+            //Flaps
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                flaps += 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                flaps -= 1;
+            }
+
+            flaps = Mathf.Clamp(flaps, 0, MaxFlapIncrements);
         }
         #endregion
 
