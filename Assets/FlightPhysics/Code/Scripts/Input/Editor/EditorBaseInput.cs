@@ -4,7 +4,7 @@ using FlightPhysics.Input;
 using UnityEditor;
 using UnityEngine;
 
-namespace MyNamespace
+namespace FlightPhysics.Input
 {
     [CustomEditor(typeof(BaseFlightInput))]
     public class EditorBaseInput : Editor
