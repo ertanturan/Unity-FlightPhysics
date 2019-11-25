@@ -4,8 +4,6 @@ using UnityEngine;
 
 namespace FlightPhysics
 {
-
-
     [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(AudioSource))]
     public class BaseRigidbodyController : MonoBehaviour
