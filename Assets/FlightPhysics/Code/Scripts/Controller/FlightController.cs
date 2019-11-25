@@ -1,8 +1,9 @@
 ﻿using FlightPhysics.Input;
 using System.Collections;
 using System.Collections.Generic;
+using FlightPhysics.Components;
 using UnityEngine;
-using FlightPhysics.GameMechanics;
+using FlightPhysics.Components;
 
 namespace FlightPhysics
 {
@@ -38,6 +39,7 @@ namespace FlightPhysics
             {
                 for (int i = 0; i < Wheels.Count; i++)
                 {
+                    Wheels[i].Init();
                 }
             }
         }

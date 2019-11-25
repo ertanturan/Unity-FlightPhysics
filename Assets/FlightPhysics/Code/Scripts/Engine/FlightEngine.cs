@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace FlightPhysics.GameMechanics
+namespace FlightPhysics.Components
 {
     public class FlightEngine : MonoBehaviour
     {
@@ -24,8 +24,6 @@ namespace FlightPhysics.GameMechanics
 
         public Vector3 CalculateForce(float throttle )
         {
-            Debug.Log("Calculating force for the engines !");
-            Debug.Log(throttle);
 
             float finalThrottle = Mathf.Clamp01(throttle);
             float finalPower = finalThrottle * MaxForce;
