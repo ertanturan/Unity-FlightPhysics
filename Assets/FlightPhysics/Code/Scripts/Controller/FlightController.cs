@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FlightPhysics.GameMechanics;
 
 namespace FlightPhysics
 {
@@ -37,19 +38,27 @@ namespace FlightPhysics
             {
                 for (int i = 0; i < Wheels.Count; i++)
                 {
-
                 }
             }
         }
 
         protected override void HandlePhysics()
         {
-            base.HandlePhysics();
-            HandleEngines();
-            HandleAerodynamics();
-            HandleSteering();
-            HandleBrakes();
-            HandleAltitude();
+            if (Input)
+            {
+                base.HandlePhysics();
+                HandleEngines();
+                HandleAerodynamics();
+                HandleSteering();
+                HandleBrakes();
+                HandleAltitude();
+            }
+            else
+            {
+                Debug.LogWarning("No input seemed to be linked !." +
+                                 " Physics won't be handled ");
+            }
+    
         }
 
         private void HandleEngines()
@@ -58,7 +67,7 @@ namespace FlightPhysics
             {
                 for (int i = 0; i < Engines.Count; i++)
                 {
-
+                    _rb.AddForce(Engines[i].CalculateForce(Input.Throttle));
                 }
             }
         }
