@@ -29,7 +29,7 @@
 
         #region BuiltIn Methods
 
-        private void Start()
+        public virtual void Start()
         {
 
         }
@@ -42,7 +42,7 @@
         #endregion
 
         #region Custom Methods
-        public virtual void HandleInput()
+        protected virtual void HandleInput()
         {
             //Main controls
             pitch = Input.GetAxis("Vertical");
