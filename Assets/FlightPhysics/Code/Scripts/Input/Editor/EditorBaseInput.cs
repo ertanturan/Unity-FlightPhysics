@@ -15,7 +15,6 @@ namespace FlightPhysics.Input
 
         #endregion
 
-
         #region BuiltIn Methods
 
         private void OnEnable()
@@ -47,7 +46,6 @@ namespace FlightPhysics.Input
 
         #endregion
     }
-
 }
 
 
