@@ -10,19 +10,19 @@
         {
             pitch = Input.GetAxis("Vertical");
             roll = Input.GetAxis("Horizontal");
-            yaw = Input.GetAxis("Yaw");
-            throttle = Input.GetAxis("Throttle");
+            yaw = Input.GetAxis("X_RH_Stick");
+            throttle = Input.GetAxis("X_RV_Stick");
 
             //Brakes
             brake = Input.GetAxis("Fire1");
 
             //Flaps
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetButtonDown("X_R_Bumper"))
             {
                 flaps += 1;
             }
 
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetButtonDown("X_L_Bumper"))
             {
                 flaps -= 1;
             }
