@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using FlightPhysics.Components;
 using UnityEngine;
-using FlightPhysics.Components;
 
 namespace FlightPhysics
 {
 
     public class FlightController : BaseRigidbodyController
     {
+
         #region Variables
         [Header("New Flight Properties")]
         public BaseFlightInput Input;

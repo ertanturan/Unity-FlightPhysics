@@ -14,7 +14,6 @@ namespace FlightPhysics.Components
         public AnimationCurve PowerCurve = AnimationCurve.Linear(0f,
             0f,1f,1f);
 
-
         [Header("Propellers")]
         public FlightPropeller Propeller;
 
