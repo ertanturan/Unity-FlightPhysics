@@ -634,6 +634,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013706124}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6670105933253986821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6670105933253986821, guid: 56fe00fda6f7c764785956b9a971a696,
+    type: 3}
+  m_PrefabInstance: {fileID: 7420905268775396248}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d17541f40761749a52ed2addfef9d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7420905268775396248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -701,5 +713,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1423880372, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
+      propertyPath: Propeller
+      value: 
+      objectReference: {fileID: 6670105933253986821}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}

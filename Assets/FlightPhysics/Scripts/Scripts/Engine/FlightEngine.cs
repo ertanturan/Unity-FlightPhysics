@@ -11,21 +11,31 @@ namespace FlightPhysics.Components
 
         public float MaxForce = 200f;
         public float MaxRPM = 2550f;
-        public AnimationCurve PowerCurve = AnimationCurve.Linear(0f,0f,1f,1f);
+        public AnimationCurve PowerCurve = AnimationCurve.Linear(0f,
+            0f,1f,1f);
+
+
+        [Header("Propellers")]
+        public FlightPropeller Propeller;
 
         #endregion
 
         #region Custom Methods
 
-        public void Init()
-        {
-
-        }
-
         public Vector3 CalculateForce(float throttle )
         {
-
+            //horsepower
             float finalThrottle = Mathf.Clamp01(throttle);
+            finalThrottle = PowerCurve.Evaluate(finalThrottle);
+
+            //rpm
+            float currentRPM = finalThrottle * MaxRPM;
+            if (Propeller!=null)
+            {
+                Propeller.HandlePropeller(currentRPM);
+            }
+
+            //force
             float finalPower = finalThrottle * MaxForce;
 
             Vector3 finalForce = transform.forward * finalPower;
@@ -34,8 +44,6 @@ namespace FlightPhysics.Components
         }
 
         #endregion
-
-
 
     }
 

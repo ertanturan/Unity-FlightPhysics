@@ -225,6 +225,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  Propeller: {fileID: 0}
 --- !u!1 &1591046554
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +940,14 @@ PrefabInstance:
     - target: {fileID: 4424511394945212, guid: 7fec36c4ed8b3504cbfb5731ed169417, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310176693542194, guid: 7fec36c4ed8b3504cbfb5731ed169417, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310176693542194, guid: 7fec36c4ed8b3504cbfb5731ed169417, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fec36c4ed8b3504cbfb5731ed169417, type: 3}
