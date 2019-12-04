@@ -701,9 +701,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1423880372, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
-      propertyPath: MaxForce
-      value: 40000
+    - target: {fileID: 7697348265840330968, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417523311904400317, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218293708683577320, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}

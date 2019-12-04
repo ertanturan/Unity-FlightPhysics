@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c391b2cb6ef9fd44bb4dc5ceee79853a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxForce: 20000
+  MaxForce: 40000
   MaxRPM: 2550
 --- !u!1 &1591046554
 GameObject:
@@ -361,12 +361,12 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643623327023144590}
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 14.38
+  m_Radius: 12.72
   m_SuspensionSpring:
     spring: 40000
     damper: 2000
     targetPosition: 0.5
-  m_SuspensionDistance: 0.3
+  m_SuspensionDistance: 12
   m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -512,12 +512,12 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5731178503208701437}
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 14.38
+  m_Radius: 12.72
   m_SuspensionSpring:
     spring: 40000
     damper: 2000
     targetPosition: 0.5
-  m_SuspensionDistance: 0.3
+  m_SuspensionDistance: 12
   m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -630,12 +630,12 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6073820267663141007}
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 8.99
+  m_Radius: 7.42
   m_SuspensionSpring:
     spring: 40000
     damper: 2000
     targetPosition: 0.5
-  m_SuspensionDistance: 0.3
+  m_SuspensionDistance: 12
   m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
