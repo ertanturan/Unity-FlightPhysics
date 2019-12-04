@@ -11,7 +11,7 @@ namespace FlightPhysics.Components
 
         public float MaxForce = 200f;
         public float MaxRPM = 2550f;
-
+        public AnimationCurve PowerCurve = AnimationCurve.Linear(0f,0f,1f,1f);
 
         #endregion
 
