@@ -39,7 +39,7 @@ public class FlightPropeller : MonoBehaviour
 
     private void HandleSwapping(float currentRPM)
     {
-        if (BlurredProperty && MainProperty)
+        if (BlurredProperty && MainProperty && SmoothBlur && HardBlur)
         {
             if (currentRPM > MinQuadRPMs && currentRPM<MinSwapRPM)
             {
@@ -58,6 +58,12 @@ public class FlightPropeller : MonoBehaviour
                 BlurredProperty.SetActive(false);
                 MainProperty.SetActive(true);
             }
+        }
+        else
+        {
+            Debug.LogWarning("Some properties are missing !. " +
+                             "Swapping propeller's visuals may not work correctly !" +
+                             "Check all the variables attached and re-run the game .");
         }
     }
 
