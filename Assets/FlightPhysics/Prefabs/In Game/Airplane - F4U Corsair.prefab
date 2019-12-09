@@ -199,8 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c391b2cb6ef9fd44bb4dc5ceee79853a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxForce: 40000
-  MaxRPM: 2550
+  MaxForce: 80000
+  MaxRPM: 5100
   PowerCurve:
     serializedVersion: 2
     m_Curve:
@@ -471,7 +471,7 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 12.72
   m_SuspensionSpring:
-    spring: 40000
+    spring: 80000
     damper: 2000
     targetPosition: 0.5
   m_SuspensionDistance: 12
@@ -622,7 +622,7 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 12.72
   m_SuspensionSpring:
-    spring: 40000
+    spring: 80000
     damper: 2000
     targetPosition: 0.5
   m_SuspensionDistance: 12
@@ -740,7 +740,7 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 7.42
   m_SuspensionSpring:
-    spring: 40000
+    spring: 80000
     damper: 2000
     targetPosition: 0.5
   m_SuspensionDistance: 20
@@ -785,6 +785,7 @@ GameObject:
   - component: {fileID: 7739554931724788111}
   - component: {fileID: 7420905268775396250}
   - component: {fileID: 6186733365077256432}
+  - component: {fileID: 1950672091438499296}
   m_Layer: 0
   m_Name: Airplane - F4U Corsair
   m_TagString: Untagged
@@ -937,6 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BrakeKey: 32
   MaxFlapIncrements: 2
+  _stickyThrottle: 0
 --- !u!114 &6186733365077256432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -958,6 +960,20 @@ MonoBehaviour:
   - {fileID: 6073820267663141008}
   - {fileID: 1643623327023144591}
   - {fileID: 5731178503208701438}
+--- !u!114 &1950672091438499296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7420905268678529476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82fa926ecd2c474faf2d7c0209f687a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForwardSpeed: 0
+  MPH: 0
 --- !u!1001 &7420905269520465365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -965,6 +981,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1704496520}
     m_Modifications:
+    - target: {fileID: 1851679773228266, guid: 7fec36c4ed8b3504cbfb5731ed169417, type: 3}
+      propertyPath: m_Name
+      value: F4U_Airplane
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209915706969634768, guid: 7fec36c4ed8b3504cbfb5731ed169417,
+        type: 3}
+      propertyPath: SmoothBlur
+      value: 
+      objectReference: {fileID: 2800000, guid: f78e23e55e91bbe4e907578f75468cb3, type: 3}
+    - target: {fileID: 4209915706969634768, guid: 7fec36c4ed8b3504cbfb5731ed169417,
+        type: 3}
+      propertyPath: HardBlur
+      value: 
+      objectReference: {fileID: 2800000, guid: 6a3ea86ce1f5c834ebd973c13eaa057b, type: 3}
     - target: {fileID: 4424511394945212, guid: 7fec36c4ed8b3504cbfb5731ed169417, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1021,10 +1051,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
-    - target: {fileID: 1851679773228266, guid: 7fec36c4ed8b3504cbfb5731ed169417, type: 3}
-      propertyPath: m_Name
-      value: F4U_Airplane
-      objectReference: {fileID: 0}
+    - target: {fileID: 6709674032176475043, guid: 7fec36c4ed8b3504cbfb5731ed169417,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aae5d638f5aa86c429f99206500be1e6, type: 2}
     - target: {fileID: 4310176693542194, guid: 7fec36c4ed8b3504cbfb5731ed169417, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
@@ -1033,16 +1064,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4209915706969634768, guid: 7fec36c4ed8b3504cbfb5731ed169417,
-        type: 3}
-      propertyPath: SmoothBlur
-      value: 
-      objectReference: {fileID: 2800000, guid: f78e23e55e91bbe4e907578f75468cb3, type: 3}
-    - target: {fileID: 4209915706969634768, guid: 7fec36c4ed8b3504cbfb5731ed169417,
-        type: 3}
-      propertyPath: HardBlur
-      value: 
-      objectReference: {fileID: 2800000, guid: 6a3ea86ce1f5c834ebd973c13eaa057b, type: 3}
     - target: {fileID: 1399874927548639624, guid: 7fec36c4ed8b3504cbfb5731ed169417,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1058,11 +1079,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 191.82358
       objectReference: {fileID: 0}
-    - target: {fileID: 6709674032176475043, guid: 7fec36c4ed8b3504cbfb5731ed169417,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: aae5d638f5aa86c429f99206500be1e6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fec36c4ed8b3504cbfb5731ed169417, type: 3}
 --- !u!114 &6670105933253986821 stripped
