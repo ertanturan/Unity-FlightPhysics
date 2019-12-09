@@ -624,6 +624,60 @@ PrefabInstance:
       propertyPath: Characteristics
       value: 
       objectReference: {fileID: 7420905268775396250}
+    - target: {fileID: 1423880372, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
+      propertyPath: MaxForce
+      value: 80000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423880372, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
+      propertyPath: MaxRPM
+      value: 5100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423880372, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
+      propertyPath: PowerCurve.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423880372, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
+      propertyPath: PowerCurve.m_Curve.Array.data[0].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423880372, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
+      propertyPath: PowerCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423880372, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
+      propertyPath: PowerCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348265840330968, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_SuspensionSpring.damper
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348265840330968, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_SuspensionSpring.spring
+      value: 80000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417523311904400317, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_SuspensionSpring.damper
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417523311904400317, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_SuspensionSpring.spring
+      value: 80000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218293708683577320, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_SuspensionSpring.damper
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218293708683577320, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_SuspensionSpring.spring
+      value: 80000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
 --- !u!1 &7420905268775396249 stripped
@@ -644,3 +698,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f82fa926ecd2c474faf2d7c0209f687a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ForwardSpeed: 0
+  MPH: 0
