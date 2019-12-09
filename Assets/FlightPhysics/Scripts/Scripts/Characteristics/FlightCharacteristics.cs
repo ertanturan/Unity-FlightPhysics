@@ -22,9 +22,10 @@ namespace FlightPhysics.Characteristics
         [Header("Characteristics")]
         public float ForwardSpeed;
         public float MPH;
-        
+
         #endregion
 
+        #region Custom Methods
 
         public void InitCharacteristics(Rigidbody rb)
         {
@@ -52,7 +53,7 @@ namespace FlightPhysics.Characteristics
             ForwardSpeed = localVelocity.z;
             MPH = ForwardSpeed * _mpsToMph;
             Debug.DrawRay(transform.position,
-                transform.position+localVelocity,Color.blue);
+                transform.position + localVelocity, Color.blue);
 
 
         }
@@ -67,7 +68,7 @@ namespace FlightPhysics.Characteristics
 
         }
 
-
+        #endregion
     }
 
 }

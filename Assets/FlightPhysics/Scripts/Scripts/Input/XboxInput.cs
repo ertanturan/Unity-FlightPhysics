@@ -6,13 +6,15 @@
 
     public class XboxInput : BaseFlightInput
     {
+       
+
         protected override void HandleInput()
         {
             pitch = Input.GetAxis("Vertical");
             roll = Input.GetAxis("Horizontal");
             yaw = Input.GetAxis("X_RH_Stick");
             throttle = Input.GetAxis("X_RV_Stick");
-
+            ThrottleControl();
             //Brakes
             brake = Input.GetAxis("Fire1");
 
@@ -29,6 +31,8 @@
 
             flaps = Mathf.Clamp(flaps, 0, MaxFlapIncrements);
         }
+
+     
     }
 }
 

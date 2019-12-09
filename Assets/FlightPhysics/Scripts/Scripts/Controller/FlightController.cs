@@ -30,8 +30,6 @@ namespace FlightPhysics
 
         #endregion
 
-        #region Methods
-
         #region BuiltIn Methods
 
         private void Awake()
@@ -101,7 +99,7 @@ namespace FlightPhysics
             {
                 for (int i = 0; i < Engines.Count; i++)
                 {
-                    _rb.AddForce(Engines[i].CalculateForce(Input.Throttle));
+                    _rb.AddForce(Engines[i].CalculateForce(Input.StickyThrottle));
                 }
             }
         }
@@ -130,10 +128,7 @@ namespace FlightPhysics
         }
         #endregion
 
-
-        #endregion
-
-    }
+      }
 
 }
 
