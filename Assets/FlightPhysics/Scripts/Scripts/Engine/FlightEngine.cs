@@ -7,7 +7,7 @@ namespace FlightPhysics.Components
     public class FlightEngine : MonoBehaviour
     {
 
-        #region Variables
+        #region Fields
 
         public float MaxForce = 200f;
         public float MaxRPM = 2550f;

@@ -3,16 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using FlightPhysics.Components;
 using UnityEngine;
+using FlightPhysics.Characteristics;
 
 namespace FlightPhysics
 {
-
+    [RequireComponent(typeof(FlightCharacteristics))]
     public class FlightController : BaseRigidbodyController
     {
 
-        #region Variables
+        #region Fields
         [Header("New Flight Properties")]
         public BaseFlightInput Input;
+
+        private FlightCharacteristics _characteristics;
         public Transform CenterOfGravity;
 
         [Tooltip("Weight is in pounds...")]
@@ -27,13 +30,18 @@ namespace FlightPhysics
 
         #endregion
 
-        #region Custom Methods
+        #region Methods
+
+        #region BuiltIn Methods
+
+        private void Awake()
+        {
+            _characteristics = GetComponent<FlightCharacteristics>();
+        }
 
         protected override void Start()
         {
             base.Start();
-            _rb.mass = _weight * PoundToKilosCOEF;
-            _rb.centerOfMass = CenterOfGravity.localPosition;
 
             if (Wheels != null && Wheels.Count > 0)
             {
@@ -42,7 +50,31 @@ namespace FlightPhysics
                     Wheels[i].Init();
                 }
             }
+
+            if (_rb)
+            {
+                _rb.mass = _weight * PoundToKilosCOEF;
+                _rb.centerOfMass = CenterOfGravity.localPosition;
+
+                if (_characteristics)
+                {
+                    _characteristics.InitCharacteristics(_rb);
+                }
+                else
+                {
+                    Debug.Log("No _characteristics found. Errors may occur !.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("No rigidbody detected. Errors may occur !.");
+            }
+
         }
+
+        #endregion
+
+        #region Custom Methods
 
         protected override void HandlePhysics()
         {
@@ -60,7 +92,7 @@ namespace FlightPhysics
                 Debug.LogWarning("No input seemed to be linked !." +
                                  " Physics won't be handled ");
             }
-    
+
         }
 
         private void HandleEngines()
@@ -76,7 +108,10 @@ namespace FlightPhysics
 
         private void HandleAerodynamics()
         {
-
+            if (_characteristics)
+            {
+                _characteristics.UpdateCharacteristics();
+            }
         }
 
         private void HandleSteering()
@@ -93,6 +128,8 @@ namespace FlightPhysics
         {
 
         }
+        #endregion
+
 
         #endregion
 
