@@ -32,8 +32,8 @@ namespace FlightPhysics.Characteristics
 
         [Header("Lift")]
         public float MaxLiftPower = 800f;
-        public AnimationCurve LiftCurve = 
-            AnimationCurve.EaseInOut(0f,0f,1f,1f);
+        public AnimationCurve LiftCurve =
+            AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
 
         [Header("Drag")]
         public float DragFactor = .01f; // how much drag do we add as we go faster and faster
@@ -45,6 +45,7 @@ namespace FlightPhysics.Characteristics
         //
         private float _angleOfAttack;
         private float _pitchAngle;
+        private float _rollAngle;
 
         private BaseFlightInput _input;
 
@@ -52,7 +53,7 @@ namespace FlightPhysics.Characteristics
 
         #region Custom Methods
 
-        public void InitCharacteristics(Rigidbody rb , BaseFlightInput input )
+        public void InitCharacteristics(Rigidbody rb, BaseFlightInput input)
         {
             //Initialization
             _input = input;
@@ -72,6 +73,8 @@ namespace FlightPhysics.Characteristics
                 CalculateLift();
                 CalculateDrag();
                 HandlePitch();
+                HandleRoll();
+
                 //HandleRigidbody();
             }
         }
@@ -79,7 +82,7 @@ namespace FlightPhysics.Characteristics
         private void CalculateForwardSpeed()
         {
             Vector3 localVelocity = transform.InverseTransformDirection(_rb.velocity);
-            ForwardSpeed = Mathf.Max(0f, localVelocity.z) ;
+            ForwardSpeed = Mathf.Max(0f, localVelocity.z);
             ForwardSpeed = Mathf.Clamp(ForwardSpeed, 0f, _maxMPS);
             MPH = ForwardSpeed * _mpsToMph;
             MPH = Mathf.Clamp(MPH, 0, MaxMPS);
@@ -96,7 +99,7 @@ namespace FlightPhysics.Characteristics
             //calculate and add lift
             Vector3 liftDirection = transform.up;
             float liftPower = LiftCurve.Evaluate(_normalizedMPH) * MaxLiftPower;
-            Vector3 finalLiftForce = liftDirection * liftPower*_angleOfAttack;
+            Vector3 finalLiftForce = liftDirection * liftPower * _angleOfAttack;
             _rb.AddForce(finalLiftForce);
         }
 
@@ -113,13 +116,25 @@ namespace FlightPhysics.Characteristics
         {
             Vector3 forwardDir = transform.forward;
             forwardDir.y = 0; // flat forward
+            forwardDir = forwardDir.normalized;
             _pitchAngle = Vector3.Angle(transform.forward, forwardDir);
-            //Debug.Log(_pitchAngle);
 
             //even though its called torque its a force that rotates rb
             Vector3 pitchTorque = _input.Pitch * PitchSpeed * transform.right;
 
             _rb.AddTorque(pitchTorque);
+        }
+
+        private void HandleRoll()
+        {
+            Vector3 rightDir = transform.right;
+            rightDir.y = 0;
+            rightDir = rightDir.normalized;
+            _rollAngle = Vector3.Angle(transform.right, rightDir);
+
+            Vector3 rollTorque = -_input.Roll * RollSpeed * transform.forward;
+
+            _rb.AddTorque(rollTorque);
         }
 
         private void HandleRigidbody()

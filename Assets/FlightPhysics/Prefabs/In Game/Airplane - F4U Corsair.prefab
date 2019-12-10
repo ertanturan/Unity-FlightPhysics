@@ -199,8 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c391b2cb6ef9fd44bb4dc5ceee79853a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxForce: 85000
-  MaxRPM: 7500
+  MaxForce: 200000
+  MaxRPM: 17500
   PowerCurve:
     serializedVersion: 2
     m_Curve:
@@ -975,7 +975,7 @@ MonoBehaviour:
   ForwardSpeed: 0
   MPH: 0
   MaxMPS: 200
-  MaxLiftPower: 56000
+  MaxLiftPower: 28000
   LiftCurve:
     serializedVersion: 2
     m_Curve:
@@ -1010,8 +1010,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   DragFactor: 0.01
-  PitchSpeed: 2000
-  RollSpeed: 2000
+  PitchSpeed: 4500
+  RollSpeed: 4500
 --- !u!1001 &7420905269520465365
 PrefabInstance:
   m_ObjectHideFlags: 0
