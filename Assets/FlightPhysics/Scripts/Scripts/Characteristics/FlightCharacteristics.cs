@@ -23,6 +23,10 @@ namespace FlightPhysics.Characteristics
         public float ForwardSpeed;
         public float MPH;
 
+        [Header("Lift")]
+        public float MaxLiftPower = 800f;
+
+
         #endregion
 
         #region Custom Methods
@@ -60,7 +64,11 @@ namespace FlightPhysics.Characteristics
 
         private void CalculateLift()
         {
+            Vector3 liftDirection = transform.up;
+            float liftPower = ForwardSpeed * MaxLiftPower;
 
+            Vector3 finalLiftForce = liftDirection * liftPower;
+            _rb.AddForce(finalLiftForce);
         }
 
         private void CalculateDrag()
