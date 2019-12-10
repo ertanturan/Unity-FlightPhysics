@@ -975,7 +975,7 @@ MonoBehaviour:
   ForwardSpeed: 0
   MPH: 0
   MaxMPS: 200
-  MaxLiftPower: 28000
+  MaxLiftPower: 32000
   LiftCurve:
     serializedVersion: 2
     m_Curve:
@@ -1012,6 +1012,7 @@ MonoBehaviour:
   DragFactor: 0.01
   PitchSpeed: 4500
   RollSpeed: 4500
+  YawSpeed: 4500
 --- !u!1001 &7420905269520465365
 PrefabInstance:
   m_ObjectHideFlags: 0

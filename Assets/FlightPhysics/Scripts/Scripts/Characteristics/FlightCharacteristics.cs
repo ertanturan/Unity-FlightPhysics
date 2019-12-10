@@ -39,14 +39,15 @@ namespace FlightPhysics.Characteristics
         public float DragFactor = .01f; // how much drag do we add as we go faster and faster
 
         [Header("Controls")]
-        public float PitchSpeed = 10f;
-        public float RollSpeed = 10f;
+        public float PitchSpeed = 100f;
+        public float RollSpeed = 100f;
+        public float YawSpeed = 100f;
 
         //
         private float _angleOfAttack;
         private float _pitchAngle;
         private float _rollAngle;
-
+        private float _yawAngle;
         private BaseFlightInput _input;
 
         #endregion
@@ -74,7 +75,7 @@ namespace FlightPhysics.Characteristics
                 CalculateDrag();
                 HandlePitch();
                 HandleRoll();
-
+                HandleYaw();
                 //HandleRigidbody();
             }
         }
@@ -135,6 +136,12 @@ namespace FlightPhysics.Characteristics
             Vector3 rollTorque = -_input.Roll * RollSpeed * transform.forward;
 
             _rb.AddTorque(rollTorque);
+        }
+
+        private void HandleYaw()
+        {
+            Vector3 yawTorque = _input.Yaw * YawSpeed * transform.up;
+            _rb.AddTorque(yawTorque);
         }
 
         private void HandleRigidbody()
