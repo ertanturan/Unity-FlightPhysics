@@ -62,6 +62,7 @@ namespace FlightPhysics.Characteristics
                 CalculateForwardSpeed();
                 CalculateLift();
                 CalculateDrag();
+                HandleRigidbody();
             }
         }
 
@@ -81,7 +82,6 @@ namespace FlightPhysics.Characteristics
             //calculate the angle of attack
             _angleOfAttack = Vector3.Dot(_rb.velocity.normalized, transform.forward);
             _angleOfAttack *= _angleOfAttack;
-            Debug.Log(_angleOfAttack);
 
             //calculate and add lift
             Vector3 liftDirection = transform.up;
@@ -97,6 +97,27 @@ namespace FlightPhysics.Characteristics
 
             _rb.drag = finalDrag;
             _rb.angularDrag = _beginningAngularDrag * ForwardSpeed;
+        }
+
+        private void HandleRigidbody()
+        {
+            if (_rb.velocity.magnitude > 5f)
+            {
+                Vector3 rbVelocity = Vector3.Slerp(_rb.velocity,
+                    transform.forward * ForwardSpeed,
+                    ForwardSpeed * _angleOfAttack * Time.deltaTime);
+
+                _rb.velocity = rbVelocity;
+
+
+                Quaternion rbRotation = Quaternion.Slerp(_rb.rotation,
+                    Quaternion.LookRotation(_rb.velocity.normalized, transform.up),
+                    Time.deltaTime
+                );
+
+                _rb.MoveRotation(rbRotation);
+
+            }
         }
 
         #endregion
