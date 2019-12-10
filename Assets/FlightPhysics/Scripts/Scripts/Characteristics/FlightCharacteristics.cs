@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FlightPhysics.Input;
 using UnityEngine;
 
 namespace FlightPhysics.Characteristics
@@ -37,16 +38,24 @@ namespace FlightPhysics.Characteristics
         [Header("Drag")]
         public float DragFactor = .01f; // how much drag do we add as we go faster and faster
 
+        [Header("Controls")]
+        public float PitchSpeed = 10f;
+        public float RollSpeed = 10f;
+
+        //
         private float _angleOfAttack;
+        private float _pitchAngle;
+
+        private BaseFlightInput _input;
 
         #endregion
 
         #region Custom Methods
 
-        public void InitCharacteristics(Rigidbody rb)
+        public void InitCharacteristics(Rigidbody rb , BaseFlightInput input )
         {
             //Initialization
-
+            _input = input;
             _rb = rb;
             _beginningDrag = _rb.drag;
             _beginningAngularDrag = _rb.angularDrag;
@@ -62,7 +71,8 @@ namespace FlightPhysics.Characteristics
                 CalculateForwardSpeed();
                 CalculateLift();
                 CalculateDrag();
-                HandleRigidbody();
+                HandlePitch();
+                //HandleRigidbody();
             }
         }
 
@@ -97,6 +107,19 @@ namespace FlightPhysics.Characteristics
 
             _rb.drag = finalDrag;
             _rb.angularDrag = _beginningAngularDrag * ForwardSpeed;
+        }
+
+        private void HandlePitch()
+        {
+            Vector3 forwardDir = transform.forward;
+            forwardDir.y = 0; // flat forward
+            _pitchAngle = Vector3.Angle(transform.forward, forwardDir);
+            //Debug.Log(_pitchAngle);
+
+            //even though its called torque its a force that rotates rb
+            Vector3 pitchTorque = _input.Pitch * PitchSpeed * transform.right;
+
+            _rb.AddTorque(pitchTorque);
         }
 
         private void HandleRigidbody()

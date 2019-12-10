@@ -56,7 +56,7 @@ namespace FlightPhysics
 
                 if (_characteristics)
                 {
-                    _characteristics.InitCharacteristics(_rb);
+                    _characteristics.InitCharacteristics(_rb,Input);
                 }
                 else
                 {

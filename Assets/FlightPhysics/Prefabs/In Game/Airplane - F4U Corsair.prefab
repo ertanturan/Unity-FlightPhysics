@@ -1010,6 +1010,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   DragFactor: 0.01
+  PitchSpeed: 2000
+  RollSpeed: 2000
 --- !u!1001 &7420905269520465365
 PrefabInstance:
   m_ObjectHideFlags: 0
