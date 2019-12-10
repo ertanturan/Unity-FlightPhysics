@@ -16,11 +16,12 @@ namespace FlightPhysics.Cameras
         protected override void HandleCamera()
         {
             RaycastHit hit;
-
-            if (Physics.Raycast(transform.position,Vector3.down,
-                out hit,Mask))
+            if (Physics.Raycast(transform.position, Vector3.down,
+                out hit, Height * 2, Mask))
             {
-                if (hit.distance<MinHeight)
+
+                Debug.Log("HERE");
+                if (hit.distance < MinHeight)
                 {
                     float targetHeight = _OriginalHeight + MinHeight - hit.distance;
                     Height = targetHeight;
@@ -31,6 +32,6 @@ namespace FlightPhysics.Cameras
             base.HandleCamera();
         }
     }
-    
+
 
 }
