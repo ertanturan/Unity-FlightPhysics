@@ -34,6 +34,9 @@ namespace FlightPhysics.Characteristics
         public AnimationCurve LiftCurve = 
             AnimationCurve.EaseInOut(0f,0f,1f,1f);
 
+        [Header("Drag")]
+        public float DragFactor = .01f; // how much drag do we add as we go faster and faster
+
         #endregion
 
         #region Custom Methods
@@ -82,6 +85,10 @@ namespace FlightPhysics.Characteristics
         private void CalculateDrag()
         {
 
+            float finalDrag = _beginningDrag + (ForwardSpeed * DragFactor);
+
+            _rb.drag = finalDrag;
+            _rb.angularDrag = _beginningAngularDrag * ForwardSpeed;
         }
 
         #endregion

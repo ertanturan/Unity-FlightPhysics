@@ -199,8 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c391b2cb6ef9fd44bb4dc5ceee79853a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxForce: 58500
-  MaxRPM: 6350
+  MaxForce: 75000
+  MaxRPM: 7000
   PowerCurve:
     serializedVersion: 2
     m_Curve:
@@ -917,8 +917,8 @@ Rigidbody:
   m_GameObject: {fileID: 7420905268678529476}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0.1
-  m_AngularDrag: 2
+  m_Drag: 0
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1009,6 +1009,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  DragFactor: 0.01
 --- !u!1001 &7420905269520465365
 PrefabInstance:
   m_ObjectHideFlags: 0
