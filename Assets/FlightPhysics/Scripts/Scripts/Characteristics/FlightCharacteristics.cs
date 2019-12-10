@@ -42,6 +42,8 @@ namespace FlightPhysics.Characteristics
         public float PitchSpeed = 100f;
         public float RollSpeed = 100f;
         public float YawSpeed = 100f;
+        public float BankingSpeed = 100f;
+
 
         //
         private float _angleOfAttack;
@@ -76,6 +78,8 @@ namespace FlightPhysics.Characteristics
                 HandlePitch();
                 HandleRoll();
                 HandleYaw();
+                HandleBanking();
+
                 //HandleRigidbody();
             }
         }
@@ -142,6 +146,16 @@ namespace FlightPhysics.Characteristics
         {
             Vector3 yawTorque = _input.Yaw * YawSpeed * transform.up;
             _rb.AddTorque(yawTorque);
+        }
+
+        private void HandleBanking()
+        {
+            float bankingSide = Mathf.InverseLerp(-90f, 90f, _rollAngle);
+            float bankingAmount = Mathf.Lerp(-1f, 1f, bankingSide);
+
+            Vector3 bankTorque = bankingAmount * BankingSpeed * transform.up;
+
+            _rb.AddTorque(bankTorque);
         }
 
         private void HandleRigidbody()

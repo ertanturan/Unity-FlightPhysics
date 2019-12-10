@@ -76,6 +76,7 @@ namespace FlightPhysics
 
         protected override void HandlePhysics()
         {
+            base.HandlePhysics();
             if (Input)
             {
                 base.HandlePhysics();
