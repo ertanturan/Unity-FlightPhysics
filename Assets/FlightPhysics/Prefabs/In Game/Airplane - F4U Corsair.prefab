@@ -113,7 +113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651449324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.011, z: 0.48}
+  m_LocalPosition: {x: 0, y: 1.011, z: 0.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7420905268678529477}
@@ -199,8 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c391b2cb6ef9fd44bb4dc5ceee79853a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxForce: 140000
-  MaxRPM: 9000
+  MaxForce: 58500
+  MaxRPM: 6350
   PowerCurve:
     serializedVersion: 2
     m_Curve:
@@ -974,7 +974,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ForwardSpeed: 0
   MPH: 0
-  MaxLiftPower: 1800
+  MaxMPS: 200
+  MaxLiftPower: 56000
+  LiftCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4311674
+      value: 0.9175185
+      inSlope: 1.2232985
+      outSlope: 1.2232985
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.07707831
+    - serializedVersion: 3
+      time: 1.0039062
+      value: 0.95990753
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &7420905269520465365
 PrefabInstance:
   m_ObjectHideFlags: 0

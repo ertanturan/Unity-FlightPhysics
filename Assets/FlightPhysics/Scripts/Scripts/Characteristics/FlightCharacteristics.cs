@@ -6,6 +6,9 @@ namespace FlightPhysics.Characteristics
 {
     public class FlightCharacteristics : MonoBehaviour
     {
+        //MPS : Meter Per Second
+        //MPH : Miles Per Hour
+
 
         #region Constants
 
@@ -18,14 +21,18 @@ namespace FlightPhysics.Characteristics
         private Rigidbody _rb;
         private float _beginningDrag;
         private float _beginningAngularDrag;
+        private float _maxMPS;
+        private float _normalizedMPH;
 
         [Header("Characteristics")]
         public float ForwardSpeed;
         public float MPH;
+        public float MaxMPS = 200f; //200 mps is for f4u corsair only (718 km/h )
 
         [Header("Lift")]
         public float MaxLiftPower = 800f;
-
+        public AnimationCurve LiftCurve = 
+            AnimationCurve.EaseInOut(0f,0f,1f,1f);
 
         #endregion
 
@@ -38,6 +45,8 @@ namespace FlightPhysics.Characteristics
             _rb = rb;
             _beginningDrag = _rb.drag;
             _beginningAngularDrag = _rb.angularDrag;
+
+            _maxMPS = MaxMPS / _mpsToMph;
         }
 
         public void UpdateCharacteristics()
@@ -54,19 +63,18 @@ namespace FlightPhysics.Characteristics
         private void CalculateForwardSpeed()
         {
             Vector3 localVelocity = transform.InverseTransformDirection(_rb.velocity);
-            ForwardSpeed = localVelocity.z;
+            ForwardSpeed = Mathf.Max(0f, localVelocity.z) ;
+            ForwardSpeed = Mathf.Clamp(ForwardSpeed, 0f, _maxMPS);
             MPH = ForwardSpeed * _mpsToMph;
-            Debug.DrawRay(transform.position,
-                transform.position + localVelocity, Color.blue);
+            MPH = Mathf.Clamp(MPH, 0, MaxMPS);
 
-
+            _normalizedMPH = Mathf.InverseLerp(0f, MaxMPS, MPH);
         }
 
         private void CalculateLift()
         {
             Vector3 liftDirection = transform.up;
-            float liftPower = ForwardSpeed * MaxLiftPower;
-
+            float liftPower = LiftCurve.Evaluate(_normalizedMPH) * MaxLiftPower;
             Vector3 finalLiftForce = liftDirection * liftPower;
             _rb.AddForce(finalLiftForce);
         }
