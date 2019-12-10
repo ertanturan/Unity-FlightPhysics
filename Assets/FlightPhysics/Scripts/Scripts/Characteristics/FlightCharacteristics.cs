@@ -37,6 +37,8 @@ namespace FlightPhysics.Characteristics
         [Header("Drag")]
         public float DragFactor = .01f; // how much drag do we add as we go faster and faster
 
+        private float _angleOfAttack;
+
         #endregion
 
         #region Custom Methods
@@ -76,9 +78,15 @@ namespace FlightPhysics.Characteristics
 
         private void CalculateLift()
         {
+            //calculate the angle of attack
+            _angleOfAttack = Vector3.Dot(_rb.velocity.normalized, transform.forward);
+            _angleOfAttack *= _angleOfAttack;
+            Debug.Log(_angleOfAttack);
+
+            //calculate and add lift
             Vector3 liftDirection = transform.up;
             float liftPower = LiftCurve.Evaluate(_normalizedMPH) * MaxLiftPower;
-            Vector3 finalLiftForce = liftDirection * liftPower;
+            Vector3 finalLiftForce = liftDirection * liftPower*_angleOfAttack;
             _rb.AddForce(finalLiftForce);
         }
 

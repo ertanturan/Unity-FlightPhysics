@@ -199,8 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c391b2cb6ef9fd44bb4dc5ceee79853a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxForce: 75000
-  MaxRPM: 7000
+  MaxForce: 85000
+  MaxRPM: 7500
   PowerCurve:
     serializedVersion: 2
     m_Curve:
@@ -918,7 +918,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.01
+  m_AngularDrag: 0.1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
