@@ -11,14 +11,18 @@ namespace FlightPhysics.Cameras
         [Space]
         public float Distance = 10f;
         public float Height = 10f;
-        public float CameraSmoothnes = .5f;
+        public float CameraSmoothnes = .25f;
         private Vector3 _currentVelocityRef;
         #region BuiltIn Methods
 
-        private void Start()
-        {
 
+        protected float _OriginalHeight;
+
+        protected virtual void Awake()
+        {
+            _OriginalHeight = Height;
         }
+
 
         private void FixedUpdate()
         {

@@ -477,6 +477,7 @@ GameObject:
   - component: {fileID: 1909993612}
   - component: {fileID: 1909993611}
   - component: {fileID: 1909993614}
+  - component: {fileID: 1909993615}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -565,6 +566,27 @@ MonoBehaviour:
   Distance: 10
   Height: 10
   CameraSmoothnes: 0.25
+--- !u!114 &1909993615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909993610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ebc9480f6065546bdcfa3116cd0c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1551042998}
+  Distance: 10
+  Height: 10
+  CameraSmoothnes: 0.25
+  MinHeight: 2
+  MinDistance: 6
+  Mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &2013706124
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +599,7 @@ GameObject:
   - component: {fileID: 2013706128}
   - component: {fileID: 2013706127}
   - component: {fileID: 2013706126}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,11 +746,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6186733365077256432, guid: 56fe00fda6f7c764785956b9a971a696,
-        type: 3}
-      propertyPath: _weight
-      value: 12694.22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
