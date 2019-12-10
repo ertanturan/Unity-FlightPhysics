@@ -303,6 +303,12 @@ Transform:
   m_Father: {fileID: 1780133478}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1551042998 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7420905268678529477, guid: 56fe00fda6f7c764785956b9a971a696,
+    type: 3}
+  m_PrefabInstance: {fileID: 7420905268775396248}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1684541488
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +476,7 @@ GameObject:
   - component: {fileID: 1909993613}
   - component: {fileID: 1909993612}
   - component: {fileID: 1909993611}
+  - component: {fileID: 1909993614}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -536,12 +543,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909993610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0011343382, y: 4.391374, z: -947.3826}
+  m_LocalPosition: {x: -0.0011343382, y: 4.391374, z: -952.766}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1909993614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909993610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0cc4e2db06d7bb47905d492a4bdb375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1551042998}
+  Distance: 10
+  Height: 10
+  CameraSmoothnes: 0.25
 --- !u!1 &2013706124
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,6 +724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186733365077256432, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: _weight
+      value: 12694.22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
