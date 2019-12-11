@@ -90,6 +90,15 @@ PrefabInstance:
       propertyPath: PitchSpeed
       value: 9000
       objectReference: {fileID: 0}
+    - target: {fileID: 1243392410, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
+      propertyPath: field of view
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697348265840330968, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7697348265840330968, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
       propertyPath: m_ForceAppPointDistance
@@ -97,8 +106,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4417523311904400317, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417523311904400317, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
       propertyPath: m_ForceAppPointDistance
       value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218293708683577320, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5218293708683577320, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
@@ -109,6 +128,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218293708683577320, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 770588212, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
       propertyPath: _axis.y
