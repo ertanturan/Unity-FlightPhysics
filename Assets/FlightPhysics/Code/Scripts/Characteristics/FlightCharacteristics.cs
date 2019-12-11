@@ -10,7 +10,9 @@ namespace FlightPhysics.Characteristics
     {
         //MPS : Meter Per Second
         //MPH : Miles Per Hour
-        private float test;
+        [SerializeField]
+        float flapDrag;
+
         #region Constants
 
         private const float _mpsToMph = 2.23694f;
@@ -112,8 +114,8 @@ namespace FlightPhysics.Characteristics
         private void CalculateDrag()
         {
             //flap drag
-            float flapDrag = _input.Flaps * _flapDragFactor;
-
+            flapDrag = Mathf.Lerp(flapDrag, _input.Flaps * _flapDragFactor,.02f);
+            //flapDrag = Mathf.Clamp(flapDrag, 0, _flapDragFactor * _input.MaxFlapIncrements);
             //speed drag
             float speedDrag = ForwardSpeed * DragFactor;
 
