@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using FlightPhysics.Input;
+using IndiePixel.UI;
 using UnityEngine;
 
 namespace FlightPhysics.Characteristics
@@ -37,6 +38,7 @@ namespace FlightPhysics.Characteristics
 
         [Header("Drag")]
         public float DragFactor = .01f; // how much drag do we add as we go faster and faster
+        public float _flapDragFactor = .005f;
 
         [Header("Controls")]
         public float PitchSpeed = 100f;
@@ -110,9 +112,14 @@ namespace FlightPhysics.Characteristics
 
         private void CalculateDrag()
         {
+            //flap drag
+            float flapDrag = _input.Flaps * _flapDragFactor;
 
-            float finalDrag = _beginningDrag + (ForwardSpeed * DragFactor);
+            //speed drag
+            float speedDrag = ForwardSpeed * DragFactor;
 
+            //sum of all drag forces
+            float finalDrag = _beginningDrag + speedDrag + flapDrag;
             _rb.drag = finalDrag;
             _rb.angularDrag = _beginningAngularDrag * ForwardSpeed;
         }

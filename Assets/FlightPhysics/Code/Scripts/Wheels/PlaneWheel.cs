@@ -8,6 +8,8 @@ namespace FlightPhysics.Components
     [RequireComponent(typeof(WheelCollider))]
     public class PlaneWheel : MonoBehaviour
     {
+        #region Fields
+
         [Header("Properties")]
         private WheelCollider _wheelCollider;
         private Vector3 _worldPos;
@@ -21,6 +23,9 @@ namespace FlightPhysics.Components
         public float SteeringAngle;
         private float _smoothSteerAngle = 2f;
         public float SteerSmoothSpeed;
+
+        #endregion
+
         #region BuiltIn Methods
 
         private void Start()
@@ -79,12 +84,6 @@ namespace FlightPhysics.Components
         }
 
         #endregion
-
-
-
-
     }
-
-
 }
 

@@ -46,7 +46,7 @@ namespace FlightPhysics.ControlSurfaces
                     inputValue = input.Pitch;
                     break;
                 case ControlSurfaceType.Flap:
-                    inputValue = input.Flaps;
+                    inputValue = -input.Flaps;
                     break;
                 case ControlSurfaceType.Rudder:
                     inputValue = input.Yaw;

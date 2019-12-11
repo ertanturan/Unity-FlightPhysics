@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 2
   TargetObj: {fileID: 3967044551219648779}
-  MaxAngle: 30
+  MaxAngle: 20
   SmoothSpeed: 2
   _axis: {x: 1, y: 0, z: 0}
 --- !u!1 &224606001
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 2
   TargetObj: {fileID: 3810594781206257808}
-  MaxAngle: 30
+  MaxAngle: 20
   SmoothSpeed: 2
   _axis: {x: 1, y: 0, z: 0}
 --- !u!1 &651449324
@@ -262,7 +262,7 @@ MonoBehaviour:
   TargetObj: {fileID: 4264225400394961242}
   MaxAngle: 45
   SmoothSpeed: 4
-  _axis: {x: 0, y: -1, z: 0}
+  _axis: {x: 0, y: 1, z: 0}
 --- !u!1 &833709053
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 2
   TargetObj: {fileID: 1642861997969145578}
-  MaxAngle: 30
+  MaxAngle: 20
   SmoothSpeed: 2
   _axis: {x: 1, y: 0, z: 0}
 --- !u!1 &1423880370
@@ -677,7 +677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 2
   TargetObj: {fileID: 2296239226206761498}
-  MaxAngle: 30
+  MaxAngle: 20
   SmoothSpeed: 2
   _axis: {x: 1, y: 0, z: 0}
 --- !u!1 &1631976483
@@ -898,7 +898,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 3
   m_ForceAppPointDistance: 0
-  m_Mass: 1
+  m_Mass: 300
   m_WheelDampingRate: 0.5
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -1055,7 +1055,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 3
   m_ForceAppPointDistance: 0
-  m_Mass: 1
+  m_Mass: 300
   m_WheelDampingRate: 0.5
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -1174,19 +1174,19 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 9
   m_SuspensionSpring:
-    spring: 160000
-    damper: 8000
+    spring: 0
+    damper: 0
     targetPosition: 0.5
   m_SuspensionDistance: 3
   m_ForceAppPointDistance: 0
-  m_Mass: 1
+  m_Mass: 300
   m_WheelDampingRate: 0.5
   m_ForwardFriction:
-    m_ExtremumSlip: 2
-    m_ExtremumValue: 2.54
-    m_AsymptoteSlip: 3.39
-    m_AsymptoteValue: 3
-    m_Stiffness: 0.2
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
   m_SidewaysFriction:
     m_ExtremumSlip: 0.2
     m_ExtremumValue: 1
@@ -1460,6 +1460,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   DragFactor: 0.01
+  _flapDragFactor: 0.05
   PitchSpeed: 13500
   RollSpeed: 13500
   YawSpeed: 13500
