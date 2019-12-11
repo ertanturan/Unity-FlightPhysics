@@ -10,8 +10,7 @@ namespace FlightPhysics.Characteristics
     {
         //MPS : Meter Per Second
         //MPH : Miles Per Hour
-
-
+        private float test;
         #region Constants
 
         private const float _mpsToMph = 2.23694f;

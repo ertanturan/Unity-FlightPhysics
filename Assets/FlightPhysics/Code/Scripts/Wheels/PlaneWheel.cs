@@ -61,13 +61,10 @@ namespace FlightPhysics.Components
                     if (input.Brake == 1)
                     {
                         //brake
-                        Debug.Log("BREAKING !");
                         _wheelCollider.brakeTorque = input.Brake * BrakePower;
-
                     }
                     else
                     {
-                        Debug.Log("BREAKING STOPPED!");
                         _wheelCollider.brakeTorque = 0f;
                         _wheelCollider.motorTorque = .00000000000001f;
                     }
