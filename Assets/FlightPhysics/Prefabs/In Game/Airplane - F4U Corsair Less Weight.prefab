@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &172372574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4935509015922954474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73cbb7bd13be4b94e8b6e4e194112b31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GroundMask:
+    serializedVersion: 2
+    m_Bits: 256
+  MaxDistanceToGround: 3
+  LiftForce: 750
+  MaxSpeed: 15
 --- !u!1001 &2486595345769546030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,20 +90,35 @@ PrefabInstance:
       propertyPath: PitchSpeed
       value: 9000
       objectReference: {fileID: 0}
-    - target: {fileID: 1950672091438499296, guid: 56fe00fda6f7c764785956b9a971a696,
+    - target: {fileID: 7697348265840330968, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
-      propertyPath: RollSpeed
-      value: 13500
+      propertyPath: m_ForceAppPointDistance
+      value: 7.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1950672091438499296, guid: 56fe00fda6f7c764785956b9a971a696,
+    - target: {fileID: 4417523311904400317, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
-      propertyPath: YawSpeed
-      value: 9000
+      propertyPath: m_ForceAppPointDistance
+      value: 7.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1950672091438499296, guid: 56fe00fda6f7c764785956b9a971a696,
+    - target: {fileID: 5218293708683577320, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
-      propertyPath: BankingSpeed
-      value: 9000
+      propertyPath: m_ForceAppPointDistance
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218293708683577320, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: m_Mass
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 770588212, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
+      propertyPath: _axis.y
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
+--- !u!1 &4935509015922954474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7420905268678529476, guid: 56fe00fda6f7c764785956b9a971a696,
+    type: 3}
+  m_PrefabInstance: {fileID: 2486595345769546030}
+  m_PrefabAsset: {fileID: 0}
