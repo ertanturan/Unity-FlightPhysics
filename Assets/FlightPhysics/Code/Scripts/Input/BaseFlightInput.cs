@@ -64,7 +64,7 @@
             brake = Input.GetKey(BrakeKey) ? 1f : 0f;
 
             //Flaps
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.C))
             {
                 flaps += 1;
             }

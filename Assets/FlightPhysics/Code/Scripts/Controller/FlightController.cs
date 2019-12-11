@@ -124,6 +124,8 @@ namespace FlightPhysics
                 foreach (PlaneWheel wh in Wheels)
                 {
                     wh.HandleWheel(Input);
+                    WheelCollider temp = wh.GetComponent<WheelCollider>();
+                    temp.ConfigureVehicleSubsteps(1, 1000, 10000);
                 }
             }
         }
