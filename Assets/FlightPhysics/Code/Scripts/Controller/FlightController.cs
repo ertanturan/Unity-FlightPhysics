@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using FlightPhysics.Components;
 using UnityEngine;
 using FlightPhysics.Characteristics;
+using FlightPhysics.ControlSurfaces;
 
 namespace FlightPhysics
 {
@@ -19,14 +20,17 @@ namespace FlightPhysics
         public Transform CenterOfGravity;
 
         [Tooltip("Weight is in pounds...")]
-        private const float PoundToKilosCOEF = 0.453592f;
-        public float _weight = 800f;
+        private const float _poundToKilosCOEF = 0.453592f;
+        public float Weight = 800f;
 
         [Header("Engines")]
         public List<FlightEngine> Engines = new List<FlightEngine>();
 
         [Header("Wheels")]
         public List<PlaneWheel> Wheels = new List<PlaneWheel>();
+
+        [Header("Control Surfaces")]
+        public List<ControlSurface> ControlSurfaces = new List<ControlSurface>();
 
         #endregion
 
@@ -51,7 +55,7 @@ namespace FlightPhysics
 
             if (_rb)
             {
-                _rb.mass = _weight * PoundToKilosCOEF;
+                _rb.mass = Weight * _poundToKilosCOEF;
                 _rb.centerOfMass = CenterOfGravity.localPosition;
 
                 if (_characteristics)
@@ -82,6 +86,7 @@ namespace FlightPhysics
                 base.HandlePhysics();
                 HandleEngines();
                 HandleAerodynamics();
+                HandleControlSurfaces();
                 HandleSteering();
                 HandleBrakes();
                 HandleAltitude();
@@ -127,6 +132,18 @@ namespace FlightPhysics
         {
 
         }
+
+        private void HandleControlSurfaces()
+        {
+            if (ControlSurfaces.Count>0)
+            {
+                foreach (ControlSurface cs in ControlSurfaces)
+                {
+                    cs.HandleControlSurface(Input);
+                }
+            }
+        }
+
         #endregion
 
       }

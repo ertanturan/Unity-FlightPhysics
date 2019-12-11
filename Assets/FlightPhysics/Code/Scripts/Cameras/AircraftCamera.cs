@@ -7,11 +7,18 @@ namespace FlightPhysics.Cameras
 
     public class AircraftCamera : BasicFollowCamera
     {
+
+        #region Fields
+
         [Header("Aircraft Properties")]
         public float MinHeight = 2f;
 
         public float MinDistance = 6f;
         public LayerMask Mask;
+
+        #endregion
+
+        #region Custom Methods
 
         protected override void HandleCamera()
         {
@@ -31,6 +38,9 @@ namespace FlightPhysics.Cameras
 
             base.HandleCamera();
         }
+
+        #endregion
+
     }
 
 

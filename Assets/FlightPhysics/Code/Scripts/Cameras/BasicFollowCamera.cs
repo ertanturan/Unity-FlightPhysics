@@ -6,6 +6,7 @@ namespace FlightPhysics.Cameras
 {
     public class BasicFollowCamera : MonoBehaviour
     {
+
         [Header("Follow Camera Properties")]
         public Transform Target;
         [Space]
@@ -13,8 +14,9 @@ namespace FlightPhysics.Cameras
         public float Height = 10f;
         public float CameraSmoothnes = .25f;
         private Vector3 _currentVelocityRef;
-        #region BuiltIn Methods
 
+
+        #region BuiltIn Methods
 
         protected float _OriginalHeight;
 
@@ -22,7 +24,6 @@ namespace FlightPhysics.Cameras
         {
             _OriginalHeight = Height;
         }
-
 
         private void FixedUpdate()
         {
@@ -34,8 +35,7 @@ namespace FlightPhysics.Cameras
 
         #endregion
 
-
-        #region Custom Method
+        #region Custom Methods
 
         protected virtual void HandleCamera()
         {
@@ -53,6 +53,8 @@ namespace FlightPhysics.Cameras
 
         protected virtual void HandleCameraCinematic()
         {
+
+            // ???
             Vector3 expectedPosition = Target.position + (-Target.forward * Distance)
                                                        + (Vector3.up * Height);
             transform.position = expectedPosition;
