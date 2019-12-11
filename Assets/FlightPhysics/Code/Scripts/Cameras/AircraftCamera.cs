@@ -27,7 +27,6 @@ namespace FlightPhysics.Cameras
                 out hit, Height * 2, Mask))
             {
 
-                Debug.Log("HERE");
                 if (hit.distance < MinHeight)
                 {
                     float targetHeight = _OriginalHeight + MinHeight - hit.distance;

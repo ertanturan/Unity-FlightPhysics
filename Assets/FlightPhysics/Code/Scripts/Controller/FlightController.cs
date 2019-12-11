@@ -87,8 +87,7 @@ namespace FlightPhysics
                 HandleEngines();
                 HandleAerodynamics();
                 HandleControlSurfaces();
-                HandleSteering();
-                HandleBrakes();
+                HandleWheels();
                 HandleAltitude();
             }
             else
@@ -118,14 +117,15 @@ namespace FlightPhysics
             }
         }
 
-        private void HandleSteering()
+        private void HandleWheels()
         {
-
-        }
-
-        private void HandleBrakes()
-        {
-
+            if (Wheels.Count>0)
+            {
+                foreach (PlaneWheel wh in Wheels)
+                {
+                    wh.HandleWheel(Input);
+                }
+            }
         }
 
         private void HandleAltitude()
