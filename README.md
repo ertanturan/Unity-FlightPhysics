@@ -1,3 +1,3 @@
-# FlightPhysics
+# A real physics based flight simulator.
 
-A real physics based flight simulator.
+
