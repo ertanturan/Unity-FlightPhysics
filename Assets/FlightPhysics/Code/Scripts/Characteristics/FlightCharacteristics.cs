@@ -78,6 +78,7 @@ namespace FlightPhysics.Characteristics
                 CalculateForwardSpeed();
                 CalculateLift();
                 CalculateDrag();
+
                 HandlePitch();
                 HandleRoll();
                 HandleYaw();
@@ -87,14 +88,13 @@ namespace FlightPhysics.Characteristics
             }
         }
 
-        private void CalculateForwardSpeed()
+        private void CalculateForwardSpeed() //THRUST
         {
             Vector3 localVelocity = transform.InverseTransformDirection(_rb.velocity);
             ForwardSpeed = Mathf.Max(0f, localVelocity.z);
             ForwardSpeed = Mathf.Clamp(ForwardSpeed, 0f, _maxMPS);
             MPH = ForwardSpeed * _mpsToMph;
             MPH = Mathf.Clamp(MPH, 0, MaxMPS);
-
             _normalizedMPH = Mathf.InverseLerp(0f, MaxMPS, MPH);
         }
 
@@ -103,7 +103,6 @@ namespace FlightPhysics.Characteristics
             //calculate the angle of attack
             _angleOfAttack = Vector3.Dot(_rb.velocity.normalized, transform.forward);
             _angleOfAttack *= _angleOfAttack;
-
             //calculate and add lift
             Vector3 liftDirection = transform.up;
             float liftPower = LiftCurve.Evaluate(_normalizedMPH) * MaxLiftPower;
@@ -115,7 +114,6 @@ namespace FlightPhysics.Characteristics
         {
             //flap drag
             flapDrag = Mathf.Lerp(flapDrag, _input.Flaps * _flapDragFactor,.02f);
-            //flapDrag = Mathf.Clamp(flapDrag, 0, _flapDragFactor * _input.MaxFlapIncrements);
             //speed drag
             float speedDrag = ForwardSpeed * DragFactor;
 

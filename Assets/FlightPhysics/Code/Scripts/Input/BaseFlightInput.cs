@@ -18,7 +18,6 @@
         public int MaxFlapIncrements = 2;
         protected float brake = 0f;
         protected float ThrottleSpeed = 0.05f;
-        [SerializeField]
         private float _stickyThrottle;
 
         #endregion
