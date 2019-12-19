@@ -7,6 +7,8 @@ public class FlightPropeller : MonoBehaviour
 
     [Header("Propeller Properties")]
     public float MinQuadRPMs = 300f;
+
+    private float _minRotationRPM = 30f;
     public float MinSwapRPM = 600f;
 
     public GameObject MainProperty;
@@ -31,6 +33,9 @@ public class FlightPropeller : MonoBehaviour
     {
         //Degrees Per Second = (RPM*360)/60
         float dps = ((currentRPM * 360) / 60) * Time.deltaTime;
+
+        dps = Mathf.Clamp(dps, 0f, _minRotationRPM);
+
         transform.Rotate(Vector3.forward, dps);
 
         HandleSwapping(currentRPM);

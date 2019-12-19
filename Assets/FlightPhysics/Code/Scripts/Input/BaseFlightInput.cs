@@ -78,7 +78,7 @@
 
         protected virtual void ThrottleControl()
         {
-            _stickyThrottle = _stickyThrottle + (Throttle * ThrottleSpeed 
+            _stickyThrottle = _stickyThrottle + (Throttle * ThrottleSpeed
                 * Time.deltaTime);
 
             _stickyThrottle = Mathf.Clamp01(_stickyThrottle);
