@@ -77,7 +77,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -294,7 +294,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1510,6 +1510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2861872890789060888}
+  - component: {fileID: 8087181773642653341}
   m_Layer: 0
   m_Name: Audio_Group
   m_TagString: Untagged
@@ -1533,6 +1534,22 @@ Transform:
   m_Father: {fileID: 7420905268678529477}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8087181773642653341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861872890789060895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2ae7f7c38375a42b21be982e0aabcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Input: {fileID: 7420905268775396250}
+  Idle: {fileID: 98900709}
+  FullThrottle: {fileID: 502913438}
+  MaxPitch: 1.2
 --- !u!1 &2861872890941280668
 GameObject:
   m_ObjectHideFlags: 0

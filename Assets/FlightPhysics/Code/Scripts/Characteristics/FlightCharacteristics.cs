@@ -10,8 +10,7 @@ namespace FlightPhysics.Characteristics
     {
         //MPS : Meter Per Second
         //MPH : Miles Per Hour
-        [SerializeField]
-        float flapDrag;
+
 
         #region Constants
 
@@ -40,6 +39,7 @@ namespace FlightPhysics.Characteristics
         [Header("Drag")]
         public float DragFactor = .01f; // how much drag do we add as we go faster and faster
         public float _flapDragFactor = .005f;
+        private float _flapDrag;
 
         [Header("Controls")]
         public float PitchSpeed = 100f;
@@ -113,12 +113,12 @@ namespace FlightPhysics.Characteristics
         private void CalculateDrag()
         {
             //flap drag
-            flapDrag = Mathf.Lerp(flapDrag, _input.Flaps * _flapDragFactor,.02f);
+            _flapDrag = Mathf.Lerp(_flapDrag, _input.Flaps * _flapDragFactor,.02f);
             //speed drag
             float speedDrag = ForwardSpeed * DragFactor;
 
             //sum of all drag forces
-            float finalDrag = _beginningDrag + speedDrag + flapDrag;
+            float finalDrag = _beginningDrag + speedDrag + _flapDrag;
             _rb.drag = finalDrag;
             _rb.angularDrag = _beginningAngularDrag * ForwardSpeed;
         }
