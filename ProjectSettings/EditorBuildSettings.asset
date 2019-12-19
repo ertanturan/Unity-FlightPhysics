@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/FlightPhysics/Scenes/FlightPhysics_Startup.unity
+    guid: bb9c9322afa6d3547ad7dbef2deb3444
   m_configObjects: {}
