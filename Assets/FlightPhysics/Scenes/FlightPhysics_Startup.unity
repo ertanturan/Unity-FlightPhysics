@@ -889,32 +889,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2861872890941280668, guid: 56fe00fda6f7c764785956b9a971a696,
-        type: 3}
-      propertyPath: m_Name
-      value: Camera Group/Controller
-      objectReference: {fileID: 0}
-    - target: {fileID: 1243392408, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
---- !u!1 &6308446600783380357 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2861872890941280668, guid: 56fe00fda6f7c764785956b9a971a696,
-    type: 3}
-  m_PrefabInstance: {fileID: 6308446600783380356}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6308446600783380358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6308446600783380357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 978746a1676cf2b44ae5aff12412e8cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
