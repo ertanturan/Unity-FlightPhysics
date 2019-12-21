@@ -125,7 +125,7 @@ namespace FlightPhysics
                 {
                     wh.HandleWheel(Input);
                     WheelCollider temp = wh.GetComponent<WheelCollider>();
-                    temp.ConfigureVehicleSubsteps(1, 1000, 10000);
+                    temp.ConfigureVehicleSubsteps(1, 12, 15);
                 }
             }
         }

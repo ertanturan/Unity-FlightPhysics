@@ -1585,7 +1585,7 @@ WheelCollider:
   m_Radius: 13
   m_SuspensionSpring:
     spring: 40000
-    damper: 2000
+    damper: 60000
     targetPosition: 0.5
   m_SuspensionDistance: 3
   m_ForceAppPointDistance: 0
@@ -1996,7 +1996,7 @@ WheelCollider:
   m_Radius: 13
   m_SuspensionSpring:
     spring: 40000
-    damper: 2000
+    damper: 60000
     targetPosition: 0.5
   m_SuspensionDistance: 3
   m_ForceAppPointDistance: 0
@@ -2120,7 +2120,7 @@ WheelCollider:
   m_Radius: 8
   m_SuspensionSpring:
     spring: 45000
-    damper: 2000
+    damper: 60000
     targetPosition: 0.5
   m_SuspensionDistance: 3
   m_ForceAppPointDistance: 0
