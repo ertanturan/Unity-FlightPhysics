@@ -6,7 +6,6 @@
 
     public class BaseFlightInput : MonoBehaviour
     {
-        public KeyCode BrakeKey = KeyCode.Space;
 
         #region Fields
 
@@ -20,6 +19,12 @@
         protected float ThrottleSpeed = 0.05f;
         private float _stickyThrottle;
 
+        public KeyCode BrakeKey = KeyCode.Space;
+
+        [SerializeField]
+        private KeyCode _cameraKey = KeyCode.X;
+        protected bool _CameraSwitch = false;
+
         #endregion
 
         #region Properties
@@ -31,6 +36,7 @@
         public int Flaps { get { return flaps; } }
         public float Brake { get { return brake; } }
         public float StickyThrottle { get { return _stickyThrottle; } }
+        public bool CameraSwitch { get { return _CameraSwitch; } }
 
         #endregion
 
@@ -74,6 +80,9 @@
             }
 
             flaps = Mathf.Clamp(flaps, 0, MaxFlapIncrements);
+
+
+            _CameraSwitch = Input.GetKeyDown(_cameraKey);
         }
 
         protected virtual void ThrottleControl()

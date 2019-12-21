@@ -326,7 +326,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: X_RH_Stick
+    m_Name: XBOX_RH_Stick
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -342,7 +342,7 @@ InputManager:
     axis: 3
     joyNum: 0
   - serializedVersion: 3
-    m_Name: X_RV_Stick
+    m_Name: XBOX_RV_Stick
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -358,7 +358,7 @@ InputManager:
     axis: 4
     joyNum: 0
   - serializedVersion: 3
-    m_Name: X_L_Bumper
+    m_Name: XBOX_L_Bumper
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -374,7 +374,7 @@ InputManager:
     axis: 4
     joyNum: 0
   - serializedVersion: 3
-    m_Name: X_R_Bumper
+    m_Name: XBOX_R_Bumper
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -388,4 +388,20 @@ InputManager:
     invert: 0
     type: 0
     axis: 4
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: XBOX_Y_Button
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick button 3
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.19
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 27
     joyNum: 0
