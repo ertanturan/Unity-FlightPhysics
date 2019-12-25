@@ -212,6 +212,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &346949567 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6186733365077256432, guid: 56fe00fda6f7c764785956b9a971a696,
+    type: 3}
+  m_PrefabInstance: {fileID: 6308446600783380356}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e309cc653f5765b4b9469c5627ebe573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &567465729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1511,7 @@ GameObject:
   - component: {fileID: 2105594058}
   - component: {fileID: 2105594060}
   - component: {fileID: 2105594059}
+  - component: {fileID: 2105594061}
   m_Layer: 5
   m_Name: Image - Altimeter
   m_TagString: Untagged
@@ -1564,6 +1577,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105594057}
   m_CullTransparentMesh: 0
+--- !u!114 &2105594061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105594057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c8ed2594598774f8f8edf0178298c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Controller: {fileID: 346949567}
+  HunderdsPointer: {fileID: 1266870742}
+  ThousandsPointer: {fileID: 851764941}
 --- !u!4 &3766420740354663147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7420905268678529477, guid: 56fe00fda6f7c764785956b9a971a696,
@@ -1590,7 +1618,7 @@ PrefabInstance:
     - target: {fileID: 7420905268678529477, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.15
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7420905268678529477, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
@@ -1701,9 +1729,11 @@ MonoBehaviour:
   onShowing:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   onHiding:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
 --- !u!95 &6440118395780217773
 Animator:
   serializedVersion: 3
