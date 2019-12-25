@@ -1,3 +1,3 @@
-# A real physics based flight simulator.
+# A Real Physics Based Flight Simulator.
 
 
