@@ -1,5 +1,4 @@
 ﻿using FlightPhysics.Input;
-using System.Collections;
 using System.Collections.Generic;
 using FlightPhysics.Components;
 using UnityEngine;
@@ -20,7 +19,6 @@ namespace FlightPhysics
         public Transform CenterOfGravity;
 
         [Tooltip("Weight is in pounds...")]
-        private const float _poundToKilosCOEF = 0.453592f;
         public float Weight = 800f;
 
         [Header("Engines")]
@@ -32,6 +30,32 @@ namespace FlightPhysics
         [Header("Control Surfaces")]
         public List<ControlSurface> ControlSurfaces = new List<ControlSurface>();
 
+        [Header("Ground Check")]
+        [SerializeField]
+        private LayerMask _mask;
+
+        #endregion
+
+        #region  Properties
+
+        private float _currentMSL;
+
+        public float CurrentMSL
+        {
+            get { return _currentMSL; }
+        }
+
+        private float _currentAGL;
+
+        public float CurrentAGL
+        {
+            get { return _currentAGL; }
+        }
+        #endregion
+
+        #region Constants
+        private const float _poundToKilosCOEF = 0.453592f;
+        private const float _metersToFeet = 3.28084f;
         #endregion
 
         #region BuiltIn Methods
@@ -60,7 +84,7 @@ namespace FlightPhysics
 
                 if (_characteristics)
                 {
-                    _characteristics.InitCharacteristics(_rb,Input);
+                    _characteristics.InitCharacteristics(_rb, Input);
                 }
                 else
                 {
@@ -119,7 +143,7 @@ namespace FlightPhysics
 
         private void HandleWheels()
         {
-            if (Wheels.Count>0)
+            if (Wheels.Count > 0)
             {
                 foreach (PlaneWheel wh in Wheels)
                 {
@@ -132,12 +156,19 @@ namespace FlightPhysics
 
         private void HandleAltitude()
         {
+            _currentMSL = transform.position.y * _metersToFeet;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, 
+                Vector3.down, out hit,1000*_metersToFeet,_mask))
+            {
+                _currentAGL = (transform.position.y - hit.point.y) * _metersToFeet;
+            }
 
         }
 
         private void HandleControlSurfaces()
         {
-            if (ControlSurfaces.Count>0)
+            if (ControlSurfaces.Count > 0)
             {
                 foreach (ControlSurface cs in ControlSurfaces)
                 {
@@ -148,7 +179,7 @@ namespace FlightPhysics
 
         #endregion
 
-      }
+    }
 
 }
 
