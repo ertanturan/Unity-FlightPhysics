@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI Instruments
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 86e509a6e01db6c4a95d4f4efc4c0428, type: 3}
+    totalSpriteSurfaceArea: 3250590
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 4e31a1112a842a59aa2b68b000c02dda
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 2dcdc475ac3617a4796cc59fbf3ab031, type: 3}
+  - {fileID: 21300000, guid: f8f44d7770eea1f4fb6c2b8f610103fc, type: 3}
+  - {fileID: 21300000, guid: 5f1e4138fdb4e744d85ed749f5dc55fd, type: 3}
+  - {fileID: 21300000, guid: a1174e88b981c2946948ecc253e04a5a, type: 3}
+  - {fileID: 21300000, guid: 9b5d631caf2a11244999b800f7aec21a, type: 3}
+  - {fileID: 21300000, guid: 9c4f58ccfc49b62428d97c20c576d183, type: 3}
+  - {fileID: 21300000, guid: b7e1a7dc5b5edd145844e107ff1c5cf8, type: 3}
+  - {fileID: 21300000, guid: f68f871d1a1b8364f89944fb50434c3a, type: 3}
+  - {fileID: 21300000, guid: cc23edddd2870f74f80f861179cbc801, type: 3}
+  - {fileID: 21300000, guid: be33113e2e0df4b40bca03717696e267, type: 3}
+  - {fileID: 21300000, guid: 849004bed04cfcc4b8ef1fd6c58d71fe, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - altimeter-center-knob
+  - tachometer-pointer
+  - fuel-gauge-bg
+  - fuel-gauge-pointer
+  - fuel-gauge-border
+  - altimeter-thousands-pointer
+  - altimeter-bg
+  - tachometer-bg
+  - airspeed-bg
+  - airspeed-pointer
+  - altimeter-hundreds-pointer
+  m_Tag: UI Instruments
+  m_IsVariant: 0
