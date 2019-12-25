@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using FlightPhysics;
+using FlightPhysics.UI;
 using UnityEngine;
 
-public class Altimeter : MonoBehaviour
+public class Altimeter : MonoBehaviour, IAirplaneUI
 {
     [Header("Altimeter Properties")]
     public FlightController Controller;
     public RectTransform HunderdsPointer;
     public RectTransform ThousandsPointer;
 
-    public void Update()
+    public void HandleAirplaneUI()
     {
         if (Controller)
         {

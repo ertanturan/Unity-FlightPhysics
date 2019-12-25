@@ -847,6 +847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxForce: 240000
   MaxRPM: 22500
+  ShutOffSpeed: 2
   PowerCurve:
     serializedVersion: 2
     m_Curve:
@@ -5343,6 +5344,9 @@ MonoBehaviour:
   - {fileID: 375280300175021896}
   - {fileID: 375280300256359559}
   - {fileID: 375280298867092793}
+  _mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &1950672091438499296
 MonoBehaviour:
   m_ObjectHideFlags: 0
