@@ -5,6 +5,7 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 namespace FlightPhysics.Components
 {
+    [RequireComponent(typeof(AircraftFuel))]
     public class FlightEngine : MonoBehaviour
     {
 
@@ -21,6 +22,8 @@ namespace FlightPhysics.Components
         private bool _isShutOff = false;
         private float _lastThrottleValue;
         private float _finalShutoffThrottleValue;
+
+        private AircraftFuel _fuel;
 
         #endregion
 
@@ -40,6 +43,19 @@ namespace FlightPhysics.Components
 
         #endregion
 
+        #region BuiltIn Methods
+
+        private void Start()
+        {
+            if (!_fuel)
+            {
+                _fuel = GetComponent<AircraftFuel>();
+            }
+
+            _fuel.InitFuel();
+        }
+
+        #endregion
 
         #region Custom Methods
 
@@ -60,6 +76,7 @@ namespace FlightPhysics.Components
                 finalThrottle = PowerCurve.Evaluate(_lastThrottleValue);
             }
 
+            HandleFuel(finalThrottle);
 
             //rpm
             _currentRPM = finalThrottle * MaxRPM;
@@ -74,6 +91,19 @@ namespace FlightPhysics.Components
             Vector3 finalForce = transform.forward * finalPower;
 
             return finalForce;
+        }
+
+        public void HandleFuel(float passedThrottle)
+        {
+            //Handle Fuel
+            if (_fuel)
+            {
+                _fuel.UpdateFuel(passedThrottle);
+                if (_fuel.CurrentFuel==0)
+                {
+                    _isShutOff = true;
+                }
+            }
         }
 
         #endregion

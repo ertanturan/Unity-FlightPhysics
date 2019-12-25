@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FlightPhysics.Components;
 using FlightPhysics.Input;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ namespace FlightPhysics.Audio
     public class AircraftAudio : MonoBehaviour
     {
         [Header("Audio Properties")]
+
+        public FlightEngine Engine;
 
         public BaseFlightInput Input;
 
@@ -33,7 +36,7 @@ namespace FlightPhysics.Audio
 
         private void Update()
         {
-            if (Input)
+            if (Engine)
             {
                 HandleAudio();
             }
@@ -41,15 +44,17 @@ namespace FlightPhysics.Audio
 
         protected virtual void HandleAudio()
         {
-            _finalVolume = Mathf.Lerp(0f, 1f, Input.StickyThrottle * 1.5f);
-            _finalPitch = Mathf.Lerp(1f, MaxPitch, Input.StickyThrottle);
+
+            float normalizedRPM = Mathf.InverseLerp(0f, Engine.MaxRPM, Engine.CurrentRPM);
+            _finalVolume = Mathf.Lerp(0f, 1f, normalizedRPM * 1.5f);
+            _finalPitch = Mathf.Lerp(1f, MaxPitch, normalizedRPM);
 
             if (FullThrottle && Idle)
             {
                 FullThrottle.volume = _finalVolume;
                 FullThrottle.pitch = _finalPitch;
 
-                //Idle.volume = 1 - _finalVolume;
+                Idle.volume = 1 - (Input.StickyThrottle * 1.5f);
             }
 
         }

@@ -812,6 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1423880371}
   - component: {fileID: 1423880372}
+  - component: {fileID: 47617788}
   m_Layer: 0
   m_Name: Engine - Front(MAIN)
   m_TagString: Untagged
@@ -873,6 +874,20 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   Propeller: {fileID: 6670105933253986821}
+--- !u!114 &47617788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423880370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d0fb3db83437b428f883005b40925d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FuelCapacity: 26
+  FuelBurnRate: 6.1
 --- !u!1 &1527800009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,6 +1811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2ae7f7c38375a42b21be982e0aabcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Engine: {fileID: 1423880372}
   Input: {fileID: 7420905268775396250}
   Idle: {fileID: 98900709}
   FullThrottle: {fileID: 502913438}

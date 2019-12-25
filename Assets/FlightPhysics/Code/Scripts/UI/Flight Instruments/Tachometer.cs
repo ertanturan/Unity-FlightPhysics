@@ -1,27 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using FlightPhysics.Components;
-using FlightPhysics.UI;
 using UnityEngine;
 
-public class Tachometer : MonoBehaviour, IAirplaneUI
+namespace FlightPhysics.UI
 {
 
-    [Header("Tachometer")]
-    public RectTransform Pointer;
-    public FlightEngine Engine;
-
-    private float _tachometerMaxRPM = 3500f;
-
-    public void HandleAirplaneUI()
+    public class Tachometer : MonoBehaviour, IAirplaneUI
     {
-        if (Engine && Pointer)
+        [Header("Tachometer")]
+        public RectTransform Pointer;
+        public FlightEngine Engine;
+
+        private float _tachometerMaxRPM = 3500f;
+
+        public void HandleAirplaneUI()
         {
-            float normalizedRPM = Mathf.InverseLerp(0f, _tachometerMaxRPM, Engine.CurrentRPM/5);
+            if (Engine && Pointer)
+            {
+                float normalizedRPM = Mathf.InverseLerp(0f, _tachometerMaxRPM, Engine.CurrentRPM / 5);
 
-            float pointerRotation = normalizedRPM * 240;
+                float pointerRotation = normalizedRPM * 240;
 
-            Pointer.rotation = Quaternion.Euler(0f, 0f, -pointerRotation);
+                Pointer.rotation = Quaternion.Euler(0f, 0f, -pointerRotation);
+            }
         }
     }
+
 }
+
