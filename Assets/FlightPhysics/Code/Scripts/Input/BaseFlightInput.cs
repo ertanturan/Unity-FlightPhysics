@@ -1,7 +1,5 @@
 ﻿namespace FlightPhysics.Input
 {
-    using System.Collections;
-    using System.Collections.Generic;
     using UnityEngine;
 
     public class BaseFlightInput : MonoBehaviour
@@ -18,7 +16,6 @@
         protected float brake = 0f;
         protected float ThrottleSpeed = 0.03f;
         private float _stickyThrottle;
-
         public KeyCode BrakeKey = KeyCode.Space;
 
         [SerializeField]
@@ -37,6 +34,7 @@
         public float Brake { get { return brake; } }
         public float StickyThrottle { get { return _stickyThrottle; } }
         public bool CameraSwitch { get { return _CameraSwitch; } }
+        public float NormalizedFlaps { get { return (float)flaps / MaxFlapIncrements; } }
 
         #endregion
 
