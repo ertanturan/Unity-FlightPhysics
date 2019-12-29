@@ -20,6 +20,7 @@ namespace FlightPhysics.Gameplay
 
         private Vector3 _gateDirection;
 
+        private bool _isCleared = false;
 
         private void Start()
         {
@@ -34,7 +35,7 @@ namespace FlightPhysics.Gameplay
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player_BodyFront"))
+            if (other.gameObject.layer == LayerMask.NameToLayer("Player") && !_isCleared)
             {
                 CheckDirection(other.transform.forward);
             }
@@ -42,12 +43,24 @@ namespace FlightPhysics.Gameplay
 
         public void ActivateGate()
         {
+            IsActive = true;
+            _isCleared = false;
+            if (ArrowImage)
+            {
+                ArrowImage.enabled = true;
+            }
 
         }
 
         public void DeActivateGate()
         {
+            IsActive = false;
+            _isCleared = true;
 
+            if (ArrowImage)
+            {
+                ArrowImage.enabled = false;
+            }
         }
 
         public void CheckDirection(Vector3 dir)
@@ -57,10 +70,13 @@ namespace FlightPhysics.Gameplay
             if (dotValue > .25f)
             {
                 //player cleared gate
+                _isCleared = true;
                 if (OnGateCleared != null)
                 {
                     OnGateCleared.Invoke();
                 }
+
+                DeActivateGate();
             }
             else
             {

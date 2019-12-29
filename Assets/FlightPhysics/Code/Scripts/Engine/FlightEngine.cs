@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
+﻿using UnityEngine;
 
 namespace FlightPhysics.Components
 {
@@ -11,11 +8,7 @@ namespace FlightPhysics.Components
 
         #region Fields
 
-        public float MaxForce = 200f;
-        public float MaxRPM = 2550f;
-        public float ShutOffSpeed = 2f;
-        public AnimationCurve PowerCurve = AnimationCurve.Linear(0f,
-            0f, 1f, 1f);
+        [Header("Engine Properties")] public Engine Eng;
 
         [Header("Propellers")]
         public FlightPropeller Propeller;
@@ -66,27 +59,27 @@ namespace FlightPhysics.Components
 
             if (!_isShutOff)
             {
-                finalThrottle = PowerCurve.Evaluate(finalThrottle);
+                finalThrottle = Eng.PowerCurve.Evaluate(finalThrottle);
                 _lastThrottleValue = finalThrottle;
             }
             else
             {
-                _lastThrottleValue -= Time.deltaTime * ShutOffSpeed;
+                _lastThrottleValue -= Time.deltaTime * Eng.ShutOffSpeed;
                 _lastThrottleValue = Mathf.Clamp01(_lastThrottleValue);
-                finalThrottle = PowerCurve.Evaluate(_lastThrottleValue);
+                finalThrottle = Eng.PowerCurve.Evaluate(_lastThrottleValue);
             }
 
             HandleFuel(finalThrottle);
 
             //rpm
-            _currentRPM = finalThrottle * MaxRPM;
+            _currentRPM = finalThrottle * Eng.MaxRPM;
             if (Propeller != null)
             {
                 Propeller.HandlePropeller(_currentRPM);
             }
 
             //force
-            float finalPower = finalThrottle * MaxForce;
+            float finalPower = finalThrottle * Eng.MaxForce;
 
             Vector3 finalForce = transform.forward * finalPower;
 
@@ -99,7 +92,7 @@ namespace FlightPhysics.Components
             if (_fuel)
             {
                 _fuel.UpdateFuel(passedThrottle);
-                if (_fuel.CurrentFuel==0)
+                if (_fuel.CurrentFuel == 0)
                 {
                     _isShutOff = true;
                 }

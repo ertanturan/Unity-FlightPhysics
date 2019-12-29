@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using FlightPhysics.Components;
+﻿using FlightPhysics.Components;
 using FlightPhysics.Input;
 using UnityEngine;
 
@@ -45,7 +43,7 @@ namespace FlightPhysics.Audio
         protected virtual void HandleAudio()
         {
 
-            float normalizedRPM = Mathf.InverseLerp(0f, Engine.MaxRPM, Engine.CurrentRPM);
+            float normalizedRPM = Mathf.InverseLerp(0f, Engine.Eng.MaxRPM, Engine.CurrentRPM);
             _finalVolume = Mathf.Lerp(0f, 1f, normalizedRPM * 1.5f);
             _finalPitch = Mathf.Lerp(1f, MaxPitch, normalizedRPM);
 
