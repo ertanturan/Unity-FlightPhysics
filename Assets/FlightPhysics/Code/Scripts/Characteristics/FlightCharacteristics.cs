@@ -33,6 +33,8 @@ namespace FlightPhysics.Characteristics
         public AnimationCurve LiftCurve =
             AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
 
+        public float FlapLiftPower = 100f;
+
         [Header("Drag")]
         public float DragFactor = .01f; // how much drag do we add as we go faster and faster
         public float _flapDragFactor = .005f;
@@ -108,7 +110,11 @@ namespace FlightPhysics.Characteristics
             //calculate and add lift
             Vector3 liftDirection = transform.up;
             float liftPower = LiftCurve.Evaluate(_normalizedMPH) * MaxLiftPower;
-            Vector3 finalLiftForce = liftDirection * liftPower * _angleOfAttack;
+
+            //add flap lift
+            float finalLiftPower = FlapLiftPower * _input.NormalizedFlaps;
+            //final lift
+            Vector3 finalLiftForce = liftDirection * (liftPower + finalLiftPower) * _angleOfAttack;
             _rb.AddForce(finalLiftForce);
         }
 

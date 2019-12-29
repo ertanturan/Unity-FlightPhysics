@@ -5415,6 +5415,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  FlapLiftPower: 1000
   DragFactor: 0.01
   _flapDragFactor: 0.5
   PitchSpeed: 9000

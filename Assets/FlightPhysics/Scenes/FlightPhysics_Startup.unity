@@ -2052,6 +2052,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Airplane - F4U Corsair
       objectReference: {fileID: 0}
+    - target: {fileID: 1950672091438499296, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: FlapLiftPower
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 7420905268678529477, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
       propertyPath: m_LocalPosition.x
