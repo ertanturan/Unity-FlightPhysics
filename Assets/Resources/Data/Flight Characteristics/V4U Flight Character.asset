@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7084ace017bfd4a8d469a76ce089c4, type: 3}
+  m_Name: V4U Flight Character
+  m_EditorClassIdentifier: 
+  MaxMPS: 200
+  MaxLiftPower: 32000
+  FlapLiftPower: 1000
+  DragFactor: 0.01
+  _flapDragFactor: 0.5
+  PitchSpeed: 9000
+  RollSpeed: 13500
+  YawSpeed: 13500
+  BankingSpeed: 13500

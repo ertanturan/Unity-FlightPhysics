@@ -2894,11 +2894,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Airplane - F4U Corsair
       objectReference: {fileID: 0}
-    - target: {fileID: 1423880372, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}
-      propertyPath: Eng
-      value: 
-      objectReference: {fileID: 11400000, guid: 7e3134366f84dc343bbc9cdacc26cc4a,
-        type: 2}
     - target: {fileID: 7420905268678529477, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
       propertyPath: m_LocalPosition.x

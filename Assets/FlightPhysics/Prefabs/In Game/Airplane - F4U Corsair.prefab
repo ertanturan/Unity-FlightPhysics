@@ -846,33 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c391b2cb6ef9fd44bb4dc5ceee79853a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxForce: 240000
-  MaxRPM: 22500
-  ShutOffSpeed: 2
-  PowerCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  Eng: {fileID: 11400000, guid: 7e3134366f84dc343bbc9cdacc26cc4a, type: 2}
   Propeller: {fileID: 6670105933253986821}
 --- !u!114 &47617788
 MonoBehaviour:
@@ -5379,10 +5353,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f82fa926ecd2c474faf2d7c0209f687a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlightCharacter: {fileID: 11400000, guid: 704e05e85b224b34b94c9a351f1cfafe, type: 2}
   ForwardSpeed: 0
   MPH: 0
-  MaxMPS: 200
-  MaxLiftPower: 32000
   LiftCurve:
     serializedVersion: 2
     m_Curve:
@@ -5416,13 +5389,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  FlapLiftPower: 1000
-  DragFactor: 0.01
-  _flapDragFactor: 0.5
-  PitchSpeed: 9000
-  RollSpeed: 13500
-  YawSpeed: 13500
-  BankingSpeed: 13500
   ControlEfficiency:
     serializedVersion: 2
     m_Curve:

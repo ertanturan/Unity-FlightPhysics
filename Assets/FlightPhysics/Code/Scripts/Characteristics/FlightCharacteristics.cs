@@ -23,28 +23,23 @@ namespace FlightPhysics.Characteristics
         private float _maxMPS;
         private float _normalizedMPH;
 
+        [Header("Flight Character")]
+        public FlightCharacteristic FlightCharacter;
+
         [Header("Characteristics")]
         public float ForwardSpeed;
         public float MPH;
-        public float MaxMPS = 200f; //200 mps is for f4u corsair only (718 km/h )
 
         [Header("Lift")]
-        public float MaxLiftPower = 800f;
+
         public AnimationCurve LiftCurve =
             AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
 
-        public float FlapLiftPower = 100f;
 
-        [Header("Drag")]
-        public float DragFactor = .01f; // how much drag do we add as we go faster and faster
-        public float _flapDragFactor = .005f;
+
         private float _flapDrag;
 
         [Header("Controls")]
-        public float PitchSpeed = 100f;
-        public float RollSpeed = 100f;
-        public float YawSpeed = 100f;
-        public float BankingSpeed = 100f;
         public AnimationCurve ControlEfficiency =
             AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
 
@@ -70,7 +65,7 @@ namespace FlightPhysics.Characteristics
             _beginningDrag = _rb.drag;
             _beginningAngularDrag = _rb.angularDrag;
 
-            _maxMPS = MaxMPS / _mpsToMph;
+            _maxMPS = FlightCharacter.MaxMPS / _mpsToMph;
         }
 
         public void UpdateCharacteristics()
@@ -98,8 +93,8 @@ namespace FlightPhysics.Characteristics
             ForwardSpeed = Mathf.Max(0f, localVelocity.z);
             ForwardSpeed = Mathf.Clamp(ForwardSpeed, 0f, _maxMPS);
             MPH = ForwardSpeed * _mpsToMph;
-            MPH = Mathf.Clamp(MPH, 0, MaxMPS);
-            _normalizedMPH = Mathf.InverseLerp(0f, MaxMPS, MPH);
+            MPH = Mathf.Clamp(MPH, 0, FlightCharacter.MaxMPS);
+            _normalizedMPH = Mathf.InverseLerp(0f, FlightCharacter.MaxMPS, MPH);
         }
 
         private void CalculateLift()
@@ -109,10 +104,10 @@ namespace FlightPhysics.Characteristics
             _angleOfAttack *= _angleOfAttack;
             //calculate and add lift
             Vector3 liftDirection = transform.up;
-            float liftPower = LiftCurve.Evaluate(_normalizedMPH) * MaxLiftPower;
+            float liftPower = LiftCurve.Evaluate(_normalizedMPH) * FlightCharacter.MaxLiftPower;
 
             //add flap lift
-            float finalLiftPower = FlapLiftPower * _input.NormalizedFlaps;
+            float finalLiftPower = FlightCharacter.FlapLiftPower * _input.NormalizedFlaps;
             //final lift
             Vector3 finalLiftForce = liftDirection * (liftPower + finalLiftPower) * _angleOfAttack;
             _rb.AddForce(finalLiftForce);
@@ -121,9 +116,9 @@ namespace FlightPhysics.Characteristics
         private void CalculateDrag()
         {
             //flap drag
-            _flapDrag = Mathf.Lerp(_flapDrag, _input.Flaps * _flapDragFactor, .02f);
+            _flapDrag = Mathf.Lerp(_flapDrag, _input.Flaps * FlightCharacter.FlapDragFactor, .02f);
             //speed drag
-            float speedDrag = ForwardSpeed * DragFactor;
+            float speedDrag = ForwardSpeed * FlightCharacter.DragFactor;
 
             //sum of all drag forces
             float finalDrag = _beginningDrag + speedDrag + _flapDrag;
@@ -139,7 +134,7 @@ namespace FlightPhysics.Characteristics
             _pitchAngle = Vector3.Angle(transform.forward, forwardDir);
 
             //even though its called torque its a force that rotates rb
-            Vector3 pitchTorque = _input.Pitch * PitchSpeed * transform.right * _controlSurfaceEfficiency;
+            Vector3 pitchTorque = _input.Pitch * FlightCharacter.PitchSpeed * transform.right * _controlSurfaceEfficiency;
 
             _rb.AddTorque(pitchTorque);
         }
@@ -151,14 +146,14 @@ namespace FlightPhysics.Characteristics
             rightDir = rightDir.normalized;
             _rollAngle = Vector3.Angle(transform.right, rightDir);
 
-            Vector3 rollTorque = -_input.Roll * RollSpeed * transform.forward * _controlSurfaceEfficiency;
+            Vector3 rollTorque = -_input.Roll * FlightCharacter.RollSpeed * transform.forward * _controlSurfaceEfficiency;
 
             _rb.AddTorque(rollTorque);
         }
 
         private void HandleYaw()
         {
-            Vector3 yawTorque = _input.Yaw * YawSpeed * transform.up * _controlSurfaceEfficiency;
+            Vector3 yawTorque = _input.Yaw * FlightCharacter.YawSpeed * transform.up * _controlSurfaceEfficiency;
             _rb.AddTorque(yawTorque);
         }
 
@@ -167,7 +162,7 @@ namespace FlightPhysics.Characteristics
             float bankingSide = Mathf.InverseLerp(-90f, 90f, _rollAngle);
             float bankingAmount = Mathf.Lerp(-1f, 1f, bankingSide);
 
-            Vector3 bankTorque = bankingAmount * BankingSpeed * transform.up;
+            Vector3 bankTorque = bankingAmount * FlightCharacter.BankingSpeed * transform.up;
 
             _rb.AddTorque(bankTorque);
         }

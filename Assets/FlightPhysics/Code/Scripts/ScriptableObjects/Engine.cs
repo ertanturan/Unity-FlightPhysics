@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Engine", menuName = "Ertan/Engine/Create New Engine", order = 1)]
+[CreateAssetMenu(fileName = "New Engine", menuName = "Ertan/Data/Engine/Create New Engine", order = 1)]
 public class Engine : ScriptableObject
 {
     public float MaxForce = 200f;
