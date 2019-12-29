@@ -5178,6 +5178,7 @@ GameObject:
   - component: {fileID: 6186733365077256432}
   - component: {fileID: 1950672091438499296}
   - component: {fileID: 2861872891432222682}
+  - component: {fileID: 1766206151}
   m_Layer: 0
   m_Name: Airplane - F4U Corsair
   m_TagString: Untagged
@@ -5464,6 +5465,18 @@ MonoBehaviour:
   MaxDistanceToGround: 3
   LiftForce: 750
   MaxSpeed: 15
+--- !u!114 &1766206151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7420905268678529476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0d6144e4e1d574ab83bd225e255203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7421801968956210855
 GameObject:
   m_ObjectHideFlags: 0
