@@ -42,14 +42,15 @@ SpriteAtlas:
       enableTightPacking: 0
     variantMultiplier: 1
     packables:
-    - {fileID: 102900000, guid: 86e509a6e01db6c4a95d4f4efc4c0428, type: 3}
-    totalSpriteSurfaceArea: 9361374
+    - {fileID: 102900000, guid: fc123103dc910bb45aef73f3563b1fcc, type: 3}
+    totalSpriteSurfaceArea: 9426910
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
       Hash: 26a3d1914b0f153b8ab74c71c36a0b2a
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 968448511746fef47a7e55780fcaffc5, type: 3}
   - {fileID: 21300000, guid: 4ddcf87335854ff4d829d2c113043f73, type: 3}
   - {fileID: 21300000, guid: 2dcdc475ac3617a4796cc59fbf3ab031, type: 3}
   - {fileID: 21300000, guid: f8f44d7770eea1f4fb6c2b8f610103fc, type: 3}
@@ -66,6 +67,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: be33113e2e0df4b40bca03717696e267, type: 3}
   - {fileID: 21300000, guid: 849004bed04cfcc4b8ef1fd6c58d71fe, type: 3}
   m_PackedSpriteNamesToIndex:
+  - down-arrow
   - attitude_indicator_toplayer
   - altimeter-center-knob
   - tachometer-pointer
