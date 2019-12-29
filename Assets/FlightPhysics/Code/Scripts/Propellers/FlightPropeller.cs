@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FlightPropeller : MonoBehaviour
 {
@@ -34,7 +32,7 @@ public class FlightPropeller : MonoBehaviour
         //Degrees Per Second = (RPM*360)/60
         float dps = ((currentRPM * 360) / 60) * Time.deltaTime;
 
-        dps = Mathf.Clamp(dps, 0f, _minRotationRPM);
+        dps = Mathf.Clamp(dps, 25f, _minRotationRPM);
 
         transform.Rotate(Vector3.forward, dps);
 
@@ -46,17 +44,17 @@ public class FlightPropeller : MonoBehaviour
     {
         if (BlurredProperty && MainProperty && SmoothBlur && HardBlur)
         {
-            if (currentRPM > MinQuadRPMs && currentRPM<MinSwapRPM)
+            if (currentRPM > MinQuadRPMs && currentRPM < MinSwapRPM)
             {
                 BlurredProperty.SetActive(true);
                 MainProperty.SetActive(false);
-                _propellerRenderer.material.SetTexture("_MainTex",SmoothBlur);
+                _propellerRenderer.material.SetTexture("_MainTex", SmoothBlur);
             }
-            else if (currentRPM>MinSwapRPM)
+            else if (currentRPM > MinSwapRPM)
             {
                 BlurredProperty.SetActive(true);
                 MainProperty.SetActive(false);
-                _propellerRenderer.material.SetTexture("_MainTex",HardBlur);
+                _propellerRenderer.material.SetTexture("_MainTex", HardBlur);
             }
             else
             {

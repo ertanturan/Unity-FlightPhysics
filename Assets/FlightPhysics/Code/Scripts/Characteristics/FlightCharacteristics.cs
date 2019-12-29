@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using FlightPhysics.Input;
-using IndiePixel.UI;
+﻿using FlightPhysics.Input;
 using UnityEngine;
 
 namespace FlightPhysics.Characteristics
@@ -46,6 +43,8 @@ namespace FlightPhysics.Characteristics
         public float RollSpeed = 100f;
         public float YawSpeed = 100f;
         public float BankingSpeed = 100f;
+        public AnimationCurve ControlEfficiency =
+            AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
 
 
         //
@@ -53,6 +52,8 @@ namespace FlightPhysics.Characteristics
         private float _pitchAngle;
         private float _rollAngle;
         private float _yawAngle;
+        private float _controlSurfaceEfficiency;
+
         private BaseFlightInput _input;
 
         #endregion
@@ -79,6 +80,7 @@ namespace FlightPhysics.Characteristics
                 CalculateLift();
                 CalculateDrag();
 
+                HandleSurfaceEfficiency();
                 HandlePitch();
                 HandleRoll();
                 HandleYaw();
@@ -113,7 +115,7 @@ namespace FlightPhysics.Characteristics
         private void CalculateDrag()
         {
             //flap drag
-            _flapDrag = Mathf.Lerp(_flapDrag, _input.Flaps * _flapDragFactor,.02f);
+            _flapDrag = Mathf.Lerp(_flapDrag, _input.Flaps * _flapDragFactor, .02f);
             //speed drag
             float speedDrag = ForwardSpeed * DragFactor;
 
@@ -131,7 +133,7 @@ namespace FlightPhysics.Characteristics
             _pitchAngle = Vector3.Angle(transform.forward, forwardDir);
 
             //even though its called torque its a force that rotates rb
-            Vector3 pitchTorque = _input.Pitch * PitchSpeed * transform.right;
+            Vector3 pitchTorque = _input.Pitch * PitchSpeed * transform.right * _controlSurfaceEfficiency;
 
             _rb.AddTorque(pitchTorque);
         }
@@ -143,14 +145,14 @@ namespace FlightPhysics.Characteristics
             rightDir = rightDir.normalized;
             _rollAngle = Vector3.Angle(transform.right, rightDir);
 
-            Vector3 rollTorque = -_input.Roll * RollSpeed * transform.forward;
+            Vector3 rollTorque = -_input.Roll * RollSpeed * transform.forward * _controlSurfaceEfficiency;
 
             _rb.AddTorque(rollTorque);
         }
 
         private void HandleYaw()
         {
-            Vector3 yawTorque = _input.Yaw * YawSpeed * transform.up;
+            Vector3 yawTorque = _input.Yaw * YawSpeed * transform.up * _controlSurfaceEfficiency;
             _rb.AddTorque(yawTorque);
         }
 
@@ -183,6 +185,11 @@ namespace FlightPhysics.Characteristics
                 _rb.MoveRotation(rbRotation);
 
             }
+        }
+
+        private void HandleSurfaceEfficiency()
+        {
+            _controlSurfaceEfficiency = ControlEfficiency.Evaluate(_normalizedMPH);
         }
 
         #endregion

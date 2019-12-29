@@ -304,7 +304,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 1000
+  far clip plane: 5000
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -661,7 +661,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 1000
+  far clip plane: 5000
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -744,7 +744,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 1000
+  far clip plane: 5000
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -888,6 +888,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FuelCapacity: 26
   FuelBurnRate: 6.1
+  OnFuelFull:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1527800009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1150,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 1000
+  far clip plane: 5000
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -5418,6 +5421,30 @@ MonoBehaviour:
   RollSpeed: 13500
   YawSpeed: 13500
   BankingSpeed: 13500
+  ControlEfficiency:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &2861872891432222682
 MonoBehaviour:
   m_ObjectHideFlags: 0
