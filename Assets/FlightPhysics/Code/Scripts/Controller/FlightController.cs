@@ -34,8 +34,8 @@ namespace FlightPhysics
         [SerializeField]
         private LayerMask _mask;
 
-        [SerializeField]
-        private PlaneState _state = PlaneState.GROUNDED;
+        [Header("State")]
+        public PlaneState State = PlaneState.GROUNDED;
 
         [SerializeField]
         private bool _isGrounded = true;
@@ -209,12 +209,12 @@ namespace FlightPhysics
 
                 if (_isGrounded)
                 {
-                    _state = PlaneState.GROUNDED;
+                    State = PlaneState.GROUNDED;
                     _isFlying = false;
                     if (_rb.velocity.magnitude < 1f)
                     {
                         _isLanded = true;
-                        _state = PlaneState.LANDED;
+                        State = PlaneState.LANDED;
                     }
                     else
                     {
@@ -226,7 +226,7 @@ namespace FlightPhysics
                     _isLanded = false;
                     _isGrounded = false;
                     _isFlying = true;
-                    _state = PlaneState.FLYING;
+                    State = PlaneState.FLYING;
                 }
 
 

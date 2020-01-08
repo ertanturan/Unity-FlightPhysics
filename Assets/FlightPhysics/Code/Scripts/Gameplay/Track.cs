@@ -13,7 +13,7 @@ namespace FlightPhysics.Gameplay
 
         [Header("Track Events")]
         public UnityEvent OnTrackCompleted = new UnityEvent();
-
+        public bool IsCompleted = false;
         void Start()
         {
             FindGates();
@@ -54,6 +54,7 @@ namespace FlightPhysics.Gameplay
                 if (OnTrackCompleted != null)
                 {
                     OnTrackCompleted.Invoke();
+                    IsCompleted = true;
                 }
             }
             else
@@ -65,7 +66,7 @@ namespace FlightPhysics.Gameplay
 
         }
 
-        private void StartTrack()
+        public void StartTrack()
         {
             if (_gates.Count > 0)
             {
