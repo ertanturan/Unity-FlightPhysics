@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7084ace017bfd4a8d469a76ce089c4, type: 3}
   m_Name: V4U Flight Character
   m_EditorClassIdentifier: 
-  MaxMPS: 200
+  MaxMPS: 160
   MaxLiftPower: 32000
   FlapLiftPower: 1000
   DragFactor: 0.01
-  _flapDragFactor: 0.5
+  FlapDragFactor: 0.0005
   PitchSpeed: 9000
   RollSpeed: 13500
   YawSpeed: 13500

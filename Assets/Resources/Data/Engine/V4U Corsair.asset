@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa19456689c4c8d49b2d931f409eea0f, type: 3}
   m_Name: V4U Corsair
   m_EditorClassIdentifier: 
-  MaxForce: 240000
-  MaxRPM: 22500
+  MaxForce: 230000
+  MaxRPM: 21500
   ShutOffSpeed: 2
   PowerCurve:
     serializedVersion: 2
