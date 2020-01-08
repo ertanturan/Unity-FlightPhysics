@@ -34,9 +34,17 @@ namespace FlightPhysics
         [SerializeField]
         private LayerMask _mask;
 
+        [SerializeField]
+        private PlaneState _state = PlaneState.GROUNDED;
 
-        [Space]
-        [SerializeField] private bool _isGrounded = true;
+        [SerializeField]
+        private bool _isGrounded = true;
+        [SerializeField]
+        private bool _isLanded = true;
+        [SerializeField]
+        private bool _isFlying = false;
+        [SerializeField]
+        private bool _isCrashed = false;
 
         #endregion
 
@@ -198,6 +206,30 @@ namespace FlightPhysics
                 }
 
                 _isGrounded = groundedCount == Wheels.Count ? true : false;
+
+                if (_isGrounded)
+                {
+                    _state = PlaneState.GROUNDED;
+                    _isFlying = false;
+                    if (_rb.velocity.magnitude < 1f)
+                    {
+                        _isLanded = true;
+                        _state = PlaneState.LANDED;
+                    }
+                    else
+                    {
+                        _isLanded = false;
+                    }
+                }
+                else
+                {
+                    _isLanded = false;
+                    _isGrounded = false;
+                    _isFlying = true;
+                    _state = PlaneState.FLYING;
+                }
+
+
 
             }
         }
