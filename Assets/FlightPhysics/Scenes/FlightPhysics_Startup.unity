@@ -2790,6 +2790,10 @@ PrefabInstance:
       propertyPath: Controller
       value: 
       objectReference: {fileID: 346949567}
+    - target: {fileID: 1804323163, guid: d3c6046a15e15d040bbb44cd0a869f63, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3c6046a15e15d040bbb44cd0a869f63, type: 3}
 --- !u!4 &3766420740354663147 stripped
@@ -2948,6 +2952,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643623327023144591, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: IsBreaking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643623327023144591, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: BrakePower
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731178503208701438, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: IsBreaking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731178503208701438, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: BrakePower
+      value: 2000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56fe00fda6f7c764785956b9a971a696, type: 3}

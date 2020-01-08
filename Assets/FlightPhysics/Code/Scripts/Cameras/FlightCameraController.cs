@@ -1,6 +1,5 @@
-﻿using System.Collections;
+﻿using FlightPhysics.Input;
 using System.Collections.Generic;
-using FlightPhysics.Input;
 using UnityEngine;
 
 public class FlightCameraController : MonoBehaviour

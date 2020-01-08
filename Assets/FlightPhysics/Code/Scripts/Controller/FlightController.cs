@@ -1,9 +1,9 @@
-﻿using FlightPhysics.Input;
-using System.Collections.Generic;
+﻿using FlightPhysics.Characteristics;
 using FlightPhysics.Components;
-using UnityEngine;
-using FlightPhysics.Characteristics;
 using FlightPhysics.ControlSurfaces;
+using FlightPhysics.Input;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace FlightPhysics
 {
@@ -33,6 +33,10 @@ namespace FlightPhysics
         [Header("Ground Check")]
         [SerializeField]
         private LayerMask _mask;
+
+
+        [Space]
+        [SerializeField] private bool _isGrounded = true;
 
         #endregion
 
@@ -96,6 +100,8 @@ namespace FlightPhysics
                 Debug.LogWarning("No rigidbody detected. Errors may occur !.");
             }
 
+            InvokeRepeating("CheckGrounded", 1f, 1f);
+
         }
 
         #endregion
@@ -158,8 +164,8 @@ namespace FlightPhysics
         {
             _currentMSL = transform.position.y * _metersToFeet;
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, 
-                Vector3.down, out hit,1000*_metersToFeet,_mask))
+            if (Physics.Raycast(transform.position,
+                Vector3.down, out hit, 1000 * _metersToFeet, _mask))
             {
                 _currentAGL = (transform.position.y - hit.point.y) * _metersToFeet;
             }
@@ -174,6 +180,25 @@ namespace FlightPhysics
                 {
                     cs.HandleControlSurface(Input);
                 }
+            }
+        }
+
+        private void CheckGrounded()
+        {
+            if (Wheels.Count > 0)
+            {
+                int groundedCount = 0;
+
+                for (int i = 0; i < Wheels.Count; i++)
+                {
+                    if (Wheels[i].IsGrounded)
+                    {
+                        groundedCount++;
+                    }
+                }
+
+                _isGrounded = groundedCount == Wheels.Count ? true : false;
+
             }
         }
 

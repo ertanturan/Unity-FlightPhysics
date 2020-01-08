@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using FlightPhysics.Input;
+﻿using FlightPhysics.Input;
 using UnityEngine;
 
 namespace FlightPhysics.Components
@@ -23,6 +21,11 @@ namespace FlightPhysics.Components
         public float SteeringAngle;
         private float _smoothSteerAngle = 2f;
         public float SteerSmoothSpeed;
+
+        #endregion
+
+        #region Properties
+        public bool IsGrounded { get { return _wheelCollider.isGrounded; } }
 
         #endregion
 
@@ -76,6 +79,9 @@ namespace FlightPhysics.Components
                         input.Yaw * SteeringAngle, Time.deltaTime * SteerSmoothSpeed);
                     _wheelCollider.steerAngle = _smoothSteerAngle;
                 }
+
+                //check if wheel grounded
+
 
             }
         }
