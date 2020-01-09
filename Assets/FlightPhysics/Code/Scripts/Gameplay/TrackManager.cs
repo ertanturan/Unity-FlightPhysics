@@ -59,7 +59,9 @@ namespace FlightPhysics.Gameplay
         {
             if (Controller)
             {
-                //StartCoroutine(WaitForLanding());
+                StartCoroutine(WaitForLanding());
+                Debug.Log("Tracks completed");
+                Debug.Log("Waiting for landing");
             }
         }
 

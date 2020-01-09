@@ -48,6 +48,7 @@ namespace FlightPhysics.Gameplay
 
         private void SelectNextGate()
         {
+            _currrentGateIndex++;
             if (_currrentGateIndex == _gates.Count)
             {
                 //Track finished.
@@ -59,7 +60,6 @@ namespace FlightPhysics.Gameplay
             }
             else
             {
-                _currrentGateIndex++;
 
                 StartTrack();
             }

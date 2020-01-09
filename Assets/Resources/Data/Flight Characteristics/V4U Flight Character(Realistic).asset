@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb7084ace017bfd4a8d469a76ce089c4, type: 3}
-  m_Name: V4U Flight Character
+  m_Name: V4U Flight Character(Realistic)
   m_EditorClassIdentifier: 
   MaxMPS: 160
   MaxLiftPower: 32000

@@ -109,7 +109,7 @@ namespace FlightPhysics
             }
 
             InvokeRepeating("CheckGrounded", 1f, 1f);
-
+            State = PlaneState.GROUNDED;
         }
 
         #endregion
@@ -205,13 +205,14 @@ namespace FlightPhysics
                     }
                 }
 
-                _isGrounded = groundedCount == Wheels.Count ? true : false;
+                _isGrounded = groundedCount == 1 || groundedCount == 2
+                    || groundedCount == 3 ? true : false;
 
                 if (_isGrounded)
                 {
                     State = PlaneState.GROUNDED;
                     _isFlying = false;
-                    if (_rb.velocity.magnitude < 1f)
+                    if (_rb.velocity.magnitude > 1f && _rb.velocity.magnitude < 5)
                     {
                         _isLanded = true;
                         State = PlaneState.LANDED;
