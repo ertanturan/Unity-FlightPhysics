@@ -1745,6 +1745,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6eaf9b11b0ffc418586001332f88fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Tracks: []
+  Controller: {fileID: 346949567}
+  OnCompletedRace:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1560831430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1861,6 +1866,7 @@ MonoBehaviour:
   OnTrackCompleted:
     m_PersistentCalls:
       m_Calls: []
+  IsCompleted: 0
 --- !u!1001 &1624937787
 PrefabInstance:
   m_ObjectHideFlags: 0
