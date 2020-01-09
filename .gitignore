@@ -10,6 +10,8 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 /[Aa]ssets/[Aa]ura 2/
+/[Aa]ssets/[Aa]mplifyColor/
+
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
 
