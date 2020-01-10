@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e4870fe7e94dbb348bd60dcb329ba7ca
+timeCreated: 1524302613
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: AgencyFB Light Wide
+  fontNames:
+  - AgencyFB Light Wide
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

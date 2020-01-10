@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ee22504c3c3f06e4bbb9e351fd16ff8e
+timeCreated: 1502381290
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Metro Grunge
+  fontNames:
+  - Metro Grunge
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
