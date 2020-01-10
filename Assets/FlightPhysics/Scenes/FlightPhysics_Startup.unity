@@ -33,12 +33,12 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 2048
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 309928427}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -51,12 +51,12 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
-    m_BakeResolution: 40
+    m_BakeResolution: 20
     m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
@@ -64,7 +64,8 @@ LightmapSettings:
     m_CompAOExponentDirect: 0
     m_ExtractAmbientOcclusion: 0
     m_Padding: 2
-    m_LightmapParameters: {fileID: 0}
+    m_LightmapParameters: {fileID: 15200, guid: 0000000000000000f000000000000000,
+      type: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
     m_FinalGather: 0
@@ -75,9 +76,9 @@ LightmapSettings:
     m_BakeBackend: 2
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 512
+    m_PVRSampleCount: 64
     m_PVRBounces: 2
-    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentSampleCount: 32
     m_PVREnvironmentReferencePointCount: 2048
     m_PVRFilteringMode: 1
     m_PVRDenoiserTypeDirect: 1
@@ -87,7 +88,7 @@ LightmapSettings:
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
     m_PVREnvironmentMIS: 1
-    m_PVRCulling: 1
+    m_PVRCulling: 0
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
@@ -249,6 +250,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large_Runway_001 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095543020572996, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4019469642382560, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2078
@@ -407,6 +412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Runway_001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1311016335406294, guid: 2faa5f70fe63c6c4fadebfca76284cde, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4097476148014876, guid: 2faa5f70fe63c6c4fadebfca76284cde, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3117
@@ -563,64 +572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 1
-  useScattering: 1
-  overrideScattering: 0
-  overridingScattering: 0.5
-  scatteringBias: 0
-  useColorTemperatureTint: 0
-  overrideColor: 0
-  overridingColor: {r: 1, g: 1, b: 1, a: 1}
-  useShadow: 1
-  shadowMapRenderTexture: {fileID: 433489638}
-  useCookie: 1
-  cookieMapRenderTexture: {fileID: 0}
-  enableOutOfPhaseColor: 1
-  outOfPhaseColorStrength: 0.1
-  outOfPhaseColor: {r: 0.0000010132779, g: 0.999999, b: 0.999999, a: 1}
-  shadowDataRenderTexture: {fileID: 340606978}
-  customDistanceFalloffThreshold: 0.5
-  customDistanceFalloffPower: 2
-  customCookieDistanceFalloffStartThreshold: 0.1
-  customCookieDistanceFalloffEndThreshold: 0.25
-  customCookieDistanceFalloffPower: 2
-  customAngularFalloffThreshold: 0.8
-  customAngularFalloffPower: 2
---- !u!84 &340606978
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Directional Light : Shadow Data Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 32
-  m_Height: 1
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!114 &346949567 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6186733365077256432, guid: 56fe00fda6f7c764785956b9a971a696,
@@ -651,9 +602,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frustumSettings:
-    baseSettings: {fileID: 11400000, guid: 31ff2f38143750a4bb33b2a8e642c92b, type: 2}
-    qualitySettings: {fileID: 986550774}
 --- !u!114 &370053658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,41 +662,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!84 &433489638
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'Directional Light : Shadow Map Render Texture'
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 512
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 52
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &467658904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -966,9 +879,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frustumSettings:
-    baseSettings: {fileID: 11400000, guid: 31ff2f38143750a4bb33b2a8e642c92b, type: 2}
-    qualitySettings: {fileID: 986550774}
 --- !u!1 &575335962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +919,10 @@ PrefabInstance:
     - target: {fileID: 1311016335406294, guid: 2faa5f70fe63c6c4fadebfca76284cde, type: 3}
       propertyPath: m_Name
       value: Small_Runway_001 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311016335406294, guid: 2faa5f70fe63c6c4fadebfca76284cde, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4097476148014876, guid: 2faa5f70fe63c6c4fadebfca76284cde, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1275,6 +1189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large_Runway_001
       objectReference: {fileID: 0}
+    - target: {fileID: 1095543020572996, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4019469642382560, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1486,6 +1404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large_Runway_001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095543020572996, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4019469642382560, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2710
@@ -1573,6 +1495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large_Runway_001 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095543020572996, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4019469642382560, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
       propertyPath: m_LocalPosition.x
       value: 467
@@ -1625,49 +1551,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 952848222}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &986550774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8334a49e76cafef4da22976db1613959, type: 3}
-  m_Name: Default Aura Quality Settings
-  m_EditorClassIdentifier: 
-  displayVolumetricLightingBuffer: 0
-  frustumGridResolution: {x: 160, y: 88, z: 128}
-  enableAutomaticStereoResizing: 1
-  farClipPlaneDistance: 128
-  depthBiasCoefficient: 0.35
-  enableVolumes: 1
-  enableVolumesTexture2DMask: 1
-  enableVolumesTexture3DMask: 1
-  enableVolumesNoiseMask: 1
-  enableAmbientLighting: 1
-  enableDirectionalLights: 1
-  enableDirectionalLightsShadows: 1
-  enableSpotLights: 1
-  enableSpotLightsShadows: 1
-  enablePointLights: 1
-  enablePointLightsShadows: 1
-  enableLightsCookies: 1
-  enableDithering: 1
-  texture3DFiltering: 1
-  EXPERIMENTAL_enableDenoisingFilter: 0
-  EXPERIMENTAL_denoisingFilterRange: 0
-  EXPERIMENTAL_enableBlurFilter: 0
-  EXPERIMENTAL_blurFilterRange: 0
-  EXPERIMENTAL_blurFilterType: 0
-  EXPERIMENTAL_blurFilterGaussianDeviation: 0.0025
-  enableTemporalReprojection: 1
-  temporalReprojectionFactor: 0.95
-  enableOcclusionCulling: 1
-  debugOcclusionCulling: 0
-  occlusionCullingAccuracy: 0
-  enableLightProbes: 0
 --- !u!1 &1107223456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1377450653, guid: 56fe00fda6f7c764785956b9a971a696,
@@ -1686,9 +1569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frustumSettings:
-    baseSettings: {fileID: 11400000, guid: 31ff2f38143750a4bb33b2a8e642c92b, type: 2}
-    qualitySettings: {fileID: 986550774}
 --- !u!114 &1107223458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1759,6 +1639,10 @@ PrefabInstance:
     - target: {fileID: 1095543020572996, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
       propertyPath: m_Name
       value: Large_Runway_001 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095543020572996, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4019469642382560, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2384,6 +2268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large_Runway_001 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095543020572996, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4019469642382560, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1633
@@ -2486,10 +2374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6df9cc359340b4bac3fb1fe9845d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnTrackCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  IsCompleted: 0
 --- !u!1001 &1624937787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2500,6 +2384,10 @@ PrefabInstance:
     - target: {fileID: 1095543020572996, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
       propertyPath: m_Name
       value: Large_Runway_001 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095543020572996, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4019469642382560, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2871,6 +2759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large_Runway_001 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095543020572996, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4019469642382560, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2545
@@ -3021,9 +2913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frustumSettings:
-    baseSettings: {fileID: 11400000, guid: 31ff2f38143750a4bb33b2a8e642c92b, type: 2}
-    qualitySettings: {fileID: 986550774}
 --- !u!114 &1909993615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3116,6 +3005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Runway_001
       objectReference: {fileID: 0}
+    - target: {fileID: 1311016335406294, guid: 2faa5f70fe63c6c4fadebfca76284cde, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4097476148014876, guid: 2faa5f70fe63c6c4fadebfca76284cde, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1039
@@ -3186,9 +3079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frustumSettings:
-    baseSettings: {fileID: 11400000, guid: 31ff2f38143750a4bb33b2a8e642c92b, type: 2}
-    qualitySettings: {fileID: 986550774}
 --- !u!114 &1964728282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3518,6 +3408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large_Runway_001 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095543020572996, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4019469642382560, guid: 3eb47a5bd6a0ced4cacec49a74f81431, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3627
@@ -3719,6 +3613,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 346949567}
     - target: {fileID: 1804323163, guid: d3c6046a15e15d040bbb44cd0a869f63, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487161204, guid: d3c6046a15e15d040bbb44cd0a869f63, type: 3}
       propertyPath: m_SizeDelta.x
       value: 200
       objectReference: {fileID: 0}
@@ -3978,12 +3876,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Airplane - F4U Corsair
       objectReference: {fileID: 0}
-    - target: {fileID: 1950672091438499296, guid: 56fe00fda6f7c764785956b9a971a696,
-        type: 3}
-      propertyPath: FlightCharacter
-      value: 
-      objectReference: {fileID: 11400000, guid: 71a020f4f86e97f4580aab792aa94baa,
-        type: 2}
     - target: {fileID: 7420905268678529477, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4039,11 +3931,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2861872891432222682, guid: 56fe00fda6f7c764785956b9a971a696,
+    - target: {fileID: 1950672091438499296, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
-      propertyPath: LiftForce
-      value: 1250
-      objectReference: {fileID: 0}
+      propertyPath: FlightCharacter
+      value: 
+      objectReference: {fileID: 11400000, guid: 71a020f4f86e97f4580aab792aa94baa,
+        type: 2}
     - target: {fileID: 1643623327023144591, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
       propertyPath: IsBreaking
@@ -4053,6 +3946,11 @@ PrefabInstance:
         type: 3}
       propertyPath: BrakePower
       value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2861872891432222682, guid: 56fe00fda6f7c764785956b9a971a696,
+        type: 3}
+      propertyPath: LiftForce
+      value: 1250
       objectReference: {fileID: 0}
     - target: {fileID: 5731178503208701438, guid: 56fe00fda6f7c764785956b9a971a696,
         type: 3}
