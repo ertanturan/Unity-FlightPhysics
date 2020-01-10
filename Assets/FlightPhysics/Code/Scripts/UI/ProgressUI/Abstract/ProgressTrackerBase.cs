@@ -1,19 +1,22 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class ProgressTrackerBase : MonoBehaviour
+namespace FlightPhysics.UI
 {
-    private TextMeshProUGUI Current;
-    private TextMeshProUGUI Total;
-
-    public virtual void Awake()
+    public class ProgressTrackerBase : MonoBehaviour
     {
-        TextMeshProUGUI[] children = GetComponentsInChildren<TextMeshProUGUI>();
-        Current = children[0]; Total = children[2];
-    }
+        private TextMeshProUGUI Current;
+        private TextMeshProUGUI Total;
 
-    public virtual void SetValues(string current, string total)
-    {
-        Current.text = current; Total.text = total;
+        public virtual void Awake()
+        {
+            TextMeshProUGUI[] children = GetComponentsInChildren<TextMeshProUGUI>();
+            Current = children[1]; Total = children[3];
+        }
+
+        public virtual void SetValues(string current, string total)
+        {
+            Current.text = current; Total.text = total;
+        }
     }
 }

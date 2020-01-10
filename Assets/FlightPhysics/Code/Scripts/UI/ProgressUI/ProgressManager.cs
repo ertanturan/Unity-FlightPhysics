@@ -1,16 +1,19 @@
-﻿public class ProgressManager : Singleton<ProgressManager>
+﻿namespace FlightPhysics.UI
 {
-    public TrackProgress TrackP;
-    public TimeProgress TimeP;
-    public GateProgress GateP;
-
-    protected override void Awake()
+    public class ProgressManager : Singleton<ProgressManager>
     {
-        base.Awake();
+        public TrackProgress TrackP;
+        public TimeProgress TimeP;
+        public GateProgress GateP;
 
-        TrackP = GetComponentInChildren<TrackProgress>();
-        TimeP = GetComponentInChildren<TimeProgress>();
-        GateP = GetComponentInChildren<GateProgress>();
+        protected override void Awake()
+        {
+            base.Awake();
+
+            TrackP = GetComponentInChildren<TrackProgress>();
+            GateP = GetComponentInChildren<GateProgress>();
+        }
+
     }
 
 }

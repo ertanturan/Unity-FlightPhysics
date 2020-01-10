@@ -8,6 +8,17 @@ namespace FlightPhysics.Gameplay
 {
     public class Track : MonoBehaviour
     {
+        public int TotalGates
+        {
+            get { return _gates.Count; }
+        }
+
+        public int CurrentGateIndex
+        {
+            get { return _currrentGateIndex; }
+        }
+
+
         private List<Gate> _gates = new List<Gate>();
         private int _currrentGateIndex = 0;
 

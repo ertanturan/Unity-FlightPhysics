@@ -1,4 +1,7 @@
-﻿public class GateProgress : ProgressTrackerBase
+﻿namespace FlightPhysics.UI
 {
+    public class GateProgress : ProgressTrackerBase
+    {
 
+    }
 }

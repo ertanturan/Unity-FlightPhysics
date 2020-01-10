@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using FlightPhysics.UI;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -33,6 +34,11 @@ namespace FlightPhysics.Gameplay
                     }
                     Tracks[i].gameObject.SetActive(true);
                     Tracks[i].StartTrack();
+                    ProgressManager.Instance.TrackP.SetValues((trackID + 1).ToString()
+                        , Tracks.Count.ToString());
+
+                    ProgressManager.Instance.GateP.SetValues(0.ToString(),
+                        Tracks[i].TotalGates.ToString());
                 }
             }
         }
