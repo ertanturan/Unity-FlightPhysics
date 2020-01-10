@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/FlightPhysics/Scenes/FlightPhysics_Startup.unity
-    guid: bb9c9322afa6d3547ad7dbef2deb3444
+    path: Assets/FlightPhysics/Scenes/FlightPhysics_Level1.unity
+    guid: 22f4a561b4eff984d86314fd0857f0aa
   m_configObjects: {}
