@@ -8,16 +8,17 @@ namespace FlightPhysics.Gameplay
 {
     public class Track : MonoBehaviour
     {
-        public int TotalGates
-        {
-            get { return _gates.Count; }
-        }
+
 
         public int CurrentGateIndex
         {
             get { return _currrentGateIndex; }
         }
 
+        public Gate[] Gates
+        {
+            get { return _gates.ToArray(); }
+        }
 
         private List<Gate> _gates = new List<Gate>();
         private int _currrentGateIndex = 0;
@@ -25,7 +26,8 @@ namespace FlightPhysics.Gameplay
         [Header("Track Events")]
         public UnityEvent OnTrackCompleted = new UnityEvent();
         public bool IsCompleted = false;
-        void Start()
+
+        private void Awake()
         {
             FindGates();
             InitGates();

@@ -1,5 +1,4 @@
-﻿using FlightPhysics.UI;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
@@ -32,10 +31,8 @@ namespace FlightPhysics.Gameplay
                 _gateDirection = -_gateDirection;
             }
 
-            OnGateCleared.AddListener(delegate
-            {
-                HandleGateUI();
-            });
+
+
         }
 
         private void OnTriggerEnter(Collider other)
@@ -94,13 +91,7 @@ namespace FlightPhysics.Gameplay
 
         }
 
-        private void HandleGateUI()
-        {
-            Track tr = GetComponentInParent<Track>();
 
-            ProgressManager.Instance.GateP.SetValues(tr.CurrentGateIndex.ToString()
-                , tr.TotalGates.ToString());
-        }
     }
 
 }
