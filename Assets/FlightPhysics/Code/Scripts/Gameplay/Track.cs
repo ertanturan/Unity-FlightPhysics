@@ -62,6 +62,7 @@ namespace FlightPhysics.Gameplay
         private void SelectNextGate()
         {
             _currrentGateIndex++;
+            Debug.Log(_currrentGateIndex + " " + _gates.Count);
             if (_currrentGateIndex == _gates.Count)
             {
                 //Track finished.

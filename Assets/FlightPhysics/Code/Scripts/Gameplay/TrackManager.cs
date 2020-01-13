@@ -15,6 +15,12 @@ namespace FlightPhysics.Gameplay
         [Header("Manager Events")]
         public UnityEvent OnCompletedRace = new UnityEvent();
 
+        public int CurrentTrackIndex
+        {
+            get { return _currentTrackIndex; }
+        }
+
+        private int _currentTrackIndex = 0;
         public int CurrentGateIndex
         {
             get
@@ -85,8 +91,8 @@ namespace FlightPhysics.Gameplay
                     else
                     {
                         Tracks[i].gameObject.SetActive(true);
+                        Tracks[i].StartTrack();
                     }
-                    Tracks[i].StartTrack();
                     ProgressManager.Instance.TrackP.SetValues((trackID + 1).ToString()
                         , Tracks.Count.ToString());
 
@@ -120,10 +126,39 @@ namespace FlightPhysics.Gameplay
         {
             if (Controller)
             {
-                StartCoroutine(WaitForLanding());
-                Debug.Log("Tracks completed");
-                Debug.Log("Waiting for landing");
+                if (IsAllTracksCompleted())
+                {
+                    StartCoroutine(WaitForLanding());
+                    Debug.Log("Tracks completed");
+                    Debug.Log("Waiting for landing");
+
+                }
+                else
+                {
+                    _currentTrackIndex++;
+                    StartTrack(_currentTrackIndex);
+                }
             }
+        }
+
+        private bool IsAllTracksCompleted()
+        {
+            int trackCompleted = 1;
+
+            foreach (Track track in Tracks)
+            {
+                if (track.IsCompleted)
+                {
+                    trackCompleted++;
+                }
+
+                if (trackCompleted == Tracks.Count)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private IEnumerator WaitForLanding()
