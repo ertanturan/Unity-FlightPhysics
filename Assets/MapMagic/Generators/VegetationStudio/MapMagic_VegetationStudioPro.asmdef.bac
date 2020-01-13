@@ -1,0 +1,15 @@
+{
+    "name": "MapMagic_VegetationStudioPro",
+    "references": [
+        "AwesomeTechnologies.VegetationStudioPro.Runtime",
+        "AwesomeTechnologies.VegetationStudioPro.Editor"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

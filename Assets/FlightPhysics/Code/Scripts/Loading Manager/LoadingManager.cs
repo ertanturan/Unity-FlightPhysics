@@ -14,11 +14,13 @@ public class LoadingManager : MonoBehaviour
 
     private IEnumerator LoadAsync(int sceneIndex)
     {
+        PercentageText.text = "0%";
+        yield return new WaitForSeconds(2f);
         AsyncOperation load = SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Single);
 
         while (load.progress != 1)
         {
-            PercentageText.text = (Mathf.InverseLerp(0f, 0.9f, load.progress) * 10) + "%";
+            PercentageText.text = (Mathf.InverseLerp(0f, 0.9f, load.progress) * 100) + "%";
             yield return null;
 
         }
