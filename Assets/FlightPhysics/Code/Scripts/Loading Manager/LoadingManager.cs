@@ -7,14 +7,14 @@ public class LoadingManager : MonoBehaviour
 {
     public Text PercentageText;
 
-    public void LoadFirstLevel()
+    public void LoadFirstLevel(int sceneIndex)
     {
-        StartCoroutine(LoadAsync());
+        StartCoroutine(LoadAsync(sceneIndex));
     }
 
-    private IEnumerator LoadAsync()
+    private IEnumerator LoadAsync(int sceneIndex)
     {
-        AsyncOperation load = SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+        AsyncOperation load = SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Single);
 
         while (load.progress != 1)
         {
