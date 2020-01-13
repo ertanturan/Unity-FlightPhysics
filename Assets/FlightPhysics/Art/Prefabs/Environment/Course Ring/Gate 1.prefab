@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 1625248752963580267}
   - component: {fileID: 6938232153126505177}
   - component: {fileID: 7961625213507988095}
+  - component: {fileID: 8807276536986387711}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -218,7 +219,7 @@ RectTransform:
   m_GameObject: {fileID: 9195205981005403716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 324499020988525634}
   m_RootOrder: 0
@@ -264,6 +265,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &8807276536986387711
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9195205981005403716}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f7f821d5d47e0a64ea043c8db0d8d585, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5878244603456777118
 PrefabInstance:
   m_ObjectHideFlags: 0
