@@ -82,11 +82,9 @@ namespace FlightPhysics.Gameplay
             {
                 for (int i = 0; i < Tracks.Count; i++)
                 {
-                    Debug.Log(i + "  " + trackID);
                     if (i != trackID)
                     {
                         Tracks[i].gameObject.SetActive(false);
-                        Debug.Log(Tracks[i].name + " set false");
                     }
                     else
                     {
