@@ -14,7 +14,7 @@
         protected int flaps = 0;
         public int MaxFlapIncrements = 2;
         protected float brake = 0f;
-        protected float ThrottleSpeed = 0.04f;
+        protected float ThrottleSpeed = 0.06f;
         private float _stickyThrottle;
         public KeyCode BrakeKey = KeyCode.Space;
 
