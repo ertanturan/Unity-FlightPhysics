@@ -22,7 +22,7 @@ namespace FlightPhysics.UI
         private void Update()
         {
             _txtElapsed.text = _sw.Elapsed.Minutes.ToString("00") + ":"
-                + _sw.Elapsed.TotalSeconds.ToString("00");
+                                                                  + (_sw.Elapsed.TotalSeconds % 60).ToString("00");
         }
     }
 
