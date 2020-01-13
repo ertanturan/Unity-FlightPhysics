@@ -1,18 +1,28 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadingManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Text PercentageText;
+
+    public void LoadFirstLevel()
     {
-        
+        StartCoroutine(LoadAsync());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator LoadAsync()
     {
-        
+        AsyncOperation load = SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+
+        while (load.progress != 1)
+        {
+            PercentageText.text = (Mathf.InverseLerp(0f, 0.9f, load.progress) * 10) + "%";
+            yield return null;
+
+        }
     }
+
+
 }
