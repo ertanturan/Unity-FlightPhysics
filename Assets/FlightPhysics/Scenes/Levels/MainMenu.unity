@@ -641,48 +641,48 @@ PrefabInstance:
     - target: {fileID: 894254491884721464, guid: 119372c0202fdf24c8c8c9203466d529,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: -40.5
       objectReference: {fileID: 0}
     - target: {fileID: 894254491884721464, guid: 119372c0202fdf24c8c8c9203466d529,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 81
       objectReference: {fileID: 0}
     - target: {fileID: 894254491884721464, guid: 119372c0202fdf24c8c8c9203466d529,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 40.5
       objectReference: {fileID: 0}
     - target: {fileID: 894254491884721464, guid: 119372c0202fdf24c8c8c9203466d529,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 81
       objectReference: {fileID: 0}
     - target: {fileID: 862621893018515928, guid: 119372c0202fdf24c8c8c9203466d529,
         type: 3}
       propertyPath: m_TargetAudioSources.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 862621893018515928, guid: 119372c0202fdf24c8c8c9203466d529,
         type: 3}
       propertyPath: m_DirectAudioVolumes.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 862621893018515928, guid: 119372c0202fdf24c8c8c9203466d529,
         type: 3}
       propertyPath: m_EnabledAudioTracks.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 862621893018515928, guid: 119372c0202fdf24c8c8c9203466d529,
         type: 3}
       propertyPath: m_DirectAudioMutes.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 862621893018515928, guid: 119372c0202fdf24c8c8c9203466d529,
         type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 77603e7878d7c9f4e81edb652a8b3978,
+      objectReference: {fileID: 32900000, guid: 46107bc9a989c2846847a0e7fd1adea3,
         type: 3}
     - target: {fileID: 862621893018515928, guid: 119372c0202fdf24c8c8c9203466d529,
         type: 3}
@@ -697,11 +697,40 @@ PrefabInstance:
     - target: {fileID: 862621893018515928, guid: 119372c0202fdf24c8c8c9203466d529,
         type: 3}
       propertyPath: m_ControlledAudioTrackCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 862621893018515928, guid: 119372c0202fdf24c8c8c9203466d529,
+        type: 3}
+      propertyPath: m_PlaybackSpeed
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 862621893018515928, guid: 119372c0202fdf24c8c8c9203466d529,
+        type: 3}
+      propertyPath: m_SkipOnDrop
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 862621893018515928, guid: 119372c0202fdf24c8c8c9203466d529,
+        type: 3}
+      propertyPath: m_Looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 862621893018515928, guid: 119372c0202fdf24c8c8c9203466d529,
+        type: 3}
+      propertyPath: m_WaitForFirstFrame
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 862621893018515928, guid: 119372c0202fdf24c8c8c9203466d529,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1612886710743338, guid: 119372c0202fdf24c8c8c9203466d529, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: e54d4488ccb7e494eb1a96ae465b6e3c, type: 3}
+      objectReference: {fileID: 8300000, guid: 287ca01fea2d7a045bf3b286de77d118, type: 3}
+    - target: {fileID: 1612886710743338, guid: 119372c0202fdf24c8c8c9203466d529, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 119372c0202fdf24c8c8c9203466d529, type: 3}
