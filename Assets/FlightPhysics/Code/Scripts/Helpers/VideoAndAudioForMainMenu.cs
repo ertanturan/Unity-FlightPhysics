@@ -29,8 +29,6 @@ public class VideoAndAudioForMainMenu : MonoBehaviour
     {
         if (_player.isPlaying)
         {
-            Debug.Log("PLaying..");
-            //Debug.Log((int)_player.frame + " " + (int)_player.frameCount);
             if (_player.frame > 5)
             {
                 _isFinished = false;
@@ -47,7 +45,6 @@ public class VideoAndAudioForMainMenu : MonoBehaviour
 
     private void VideoFinished()
     {
-        Debug.Log("Finished");
         _player.Stop(); _audio.Stop();
         _player.waitForFirstFrame = false;
         _player.playbackSpeed = 1;
