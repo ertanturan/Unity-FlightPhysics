@@ -8382,7 +8382,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TOTAL DISTANCE TRAVELLED
+  m_Text: TOTAL DISTANCE FLOWN
 --- !u!1 &1112522520747006072
 GameObject:
   m_ObjectHideFlags: 0
@@ -10316,7 +10316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &895616644980380090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26881,7 +26881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &894046565339125410
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28445,7 +28445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &894378642157436124
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37230,7 +37230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &894907067055360464
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39563,7 +39563,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ROAD KILLS
+  m_Text: TEAM KILLS
 --- !u!1 &1113352273389732210
 GameObject:
   m_ObjectHideFlags: 0
@@ -40037,7 +40037,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AVG DISTANCE ON FOOT
+  m_Text: AVG DISTANCE ON AIR
 --- !u!1 &1113363967963615366
 GameObject:
   m_ObjectHideFlags: 0
@@ -47230,7 +47230,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113976178848275656}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -47775,7 +47775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &894057648593122840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -58563,7 +58563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &894156140317933782
 RectTransform:
   m_ObjectHideFlags: 0
