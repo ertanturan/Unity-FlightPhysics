@@ -347,7 +347,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 1783105498}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3857
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -765,7 +765,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 1783105498}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3857
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -909,7 +909,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 1783105498}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3857
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 1783105498}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3857
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
