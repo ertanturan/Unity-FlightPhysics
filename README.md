@@ -13,3 +13,5 @@ https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/ampl
 All weight related calculations are using 'pounds' instead of kilos. And, converting pounds to kilos when adding mass to rigidbody.
 
 ## Four Forces
+
+Thrust, Drag , Lift and the Gravity.
