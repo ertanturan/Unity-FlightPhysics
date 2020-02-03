@@ -8,7 +8,7 @@ https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/ampl
 
 # Simulated Forces & Calculation
 
-# Weight
+## Weight
 
 All weight related calculations are using 'pounds' instead of kilos. And, converting pounds to kilos when adding mass to rigidbody.
 
