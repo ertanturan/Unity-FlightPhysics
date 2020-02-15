@@ -260,7 +260,6 @@ GameObject:
   - component: {fileID: 425540458}
   - component: {fileID: 425540457}
   - component: {fileID: 1964728282}
-  - component: {fileID: 257319943}
   m_Layer: 9
   m_Name: Left Wing Camera
   m_TagString: Untagged
@@ -393,21 +392,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &257319943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425540455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frustumSettings:
-    baseSettings: {fileID: 0}
-    qualitySettings: {fileID: 0}
 --- !u!1 &502913436
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +678,6 @@ GameObject:
   - component: {fileID: 1243392410}
   - component: {fileID: 1243392409}
   - component: {fileID: 370053658}
-  - component: {fileID: 570445950}
   m_Layer: 9
   m_Name: Cockpit Camera
   m_TagString: Untagged
@@ -827,21 +810,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &570445950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1243392408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frustumSettings:
-    baseSettings: {fileID: 0}
-    qualitySettings: {fileID: 0}
 --- !u!1 &1377450653
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,7 +822,6 @@ GameObject:
   - component: {fileID: 1377450656}
   - component: {fileID: 1377450655}
   - component: {fileID: 1107223458}
-  - component: {fileID: 612362593}
   m_Layer: 9
   m_Name: Right  Wing Camera
   m_TagString: Untagged
@@ -987,21 +954,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &612362593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377450653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frustumSettings:
-    baseSettings: {fileID: 0}
-    qualitySettings: {fileID: 0}
 --- !u!1 &1394980907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,7 +1263,6 @@ GameObject:
   - component: {fileID: 1783105500}
   - component: {fileID: 1783105499}
   - component: {fileID: 574213471}
-  - component: {fileID: 1897969974}
   m_Layer: 9
   m_Name: Rudder Camera
   m_TagString: Untagged
@@ -1444,21 +1395,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &1897969974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783105497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frustumSettings:
-    baseSettings: {fileID: 0}
-    qualitySettings: {fileID: 0}
 --- !u!1 &1867018835
 GameObject:
   m_ObjectHideFlags: 0

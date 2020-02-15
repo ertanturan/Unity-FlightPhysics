@@ -45,7 +45,7 @@ MonoBehaviour:
     overrideState: 0
     value: 1
   ldrLut:
-    overrideState: 1
+    overrideState: 0
     value: {fileID: 2800000, guid: 2bf97bb8f87344d43aeaf16e759c600c, type: 3}
     defaultState: 4
   ldrLutContribution:
