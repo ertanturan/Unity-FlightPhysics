@@ -4,11 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/FlightPhysics/Scenes/Levels/MainMenu.unity
-    guid: 4842a5b4490c91c469372ff69a0e1fbb
-  - enabled: 1
-    path: Assets/FlightPhysics/Scenes/Levels/FlightPhysics_Level1.unity
-    guid: fae6ad3cd6b81ec43b74fb89cf60ec48
+  m_Scenes: []
   m_configObjects: {}
