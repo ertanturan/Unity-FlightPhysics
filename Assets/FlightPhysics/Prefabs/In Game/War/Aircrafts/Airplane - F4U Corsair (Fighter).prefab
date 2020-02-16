@@ -2691,7 +2691,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   PoolType: 0
-  key: 32
 --- !u!1 &7847706260164586374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,7 +2806,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   PoolType: 0
-  key: 32
 --- !u!1 &7847709708305021746
 GameObject:
   m_ObjectHideFlags: 0
@@ -3553,8 +3551,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e786f6adb28c264f8f2a23ca1428a04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BombsList: []
-  RocketList: []
+  BombsList:
+  - {fileID: 8112455474678332019}
+  RocketList:
+  - {fileID: 997985406573209451}
+  - {fileID: 8994534746451565564}
+  - {fileID: 3248161376403955562}
+  - {fileID: 2330391057087768062}
+  - {fileID: 5863443173773812736}
+  - {fileID: 9208766261887663613}
+  FireRocketKey: 282
+  FireBombKey: 283
 --- !u!1 &7848767741131544856
 GameObject:
   m_ObjectHideFlags: 0
@@ -4098,7 +4105,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   PoolType: 0
-  key: 32
 --- !u!1 &7849085795646255342
 GameObject:
   m_ObjectHideFlags: 0
@@ -4696,7 +4702,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   PoolType: 0
-  key: 32
 --- !u!1 &7849209206311609202
 GameObject:
   m_ObjectHideFlags: 0
@@ -5436,7 +5441,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   PoolType: 0
-  key: 32
 --- !u!1 &7849421099818666836
 GameObject:
   m_ObjectHideFlags: 0
@@ -5756,7 +5760,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   PoolType: 0
-  key: 32
 --- !u!1 &7849583243781326000
 GameObject:
   m_ObjectHideFlags: 0
