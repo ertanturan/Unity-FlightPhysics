@@ -3,6 +3,9 @@
 
     public class StraightRocket : Rocket
     {
+        protected virtual void FixedUpdate()
+        {
 
+        }
     }
 }

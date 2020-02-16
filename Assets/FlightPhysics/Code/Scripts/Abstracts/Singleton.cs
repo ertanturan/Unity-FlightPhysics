@@ -2,6 +2,7 @@
 
 public class Singleton<T> : MonoBehaviour where T : Component
 {
+    [Header("Singletion Properties")]
     public bool DontDestroyOnLoading = false;
 
     public static T Instance
@@ -43,4 +44,5 @@ public class Singleton<T> : MonoBehaviour where T : Component
             }
         }
     }
+
 }
