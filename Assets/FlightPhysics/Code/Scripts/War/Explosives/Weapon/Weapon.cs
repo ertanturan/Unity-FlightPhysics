@@ -6,8 +6,6 @@ namespace FlightPhysics.War.Explosives
     {
         public KeyCode key = KeyCode.Space;
 
-
-
         public virtual void Fire()
         {
 

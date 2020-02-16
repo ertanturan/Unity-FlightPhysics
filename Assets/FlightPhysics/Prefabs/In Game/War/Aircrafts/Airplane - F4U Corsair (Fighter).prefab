@@ -1987,6 +1987,37 @@ MonoBehaviour:
   IsSteering: 0
   SteeringAngle: 0
   SteerSmoothSpeed: 0
+--- !u!1 &2738750531345184205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7754285324764162688}
+  m_Layer: 9
+  m_Name: Bomb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7754285324764162688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738750531345184205}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7846635400884173056}
+  m_Father: {fileID: 1423368634811084106}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3287720209635075337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,6 +2177,42 @@ Transform:
   - {fileID: 7846618691475171648}
   m_Father: {fileID: 7853014311292394700}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3911395113557902650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3222181044240664554}
+  m_Layer: 9
+  m_Name: Rockets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3222181044240664554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3911395113557902650}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7852879176340753926}
+  - {fileID: 7846736062493271488}
+  - {fileID: 7852842370481569234}
+  - {fileID: 7846546970775385764}
+  - {fileID: 7852852776554926096}
+  - {fileID: 7846578044261551068}
+  m_Father: {fileID: 1423368634811084106}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4830013061817242278
 GameObject:
@@ -2520,6 +2587,8 @@ GameObject:
   - component: {fileID: 7846578044261551068}
   - component: {fileID: 7826449105482562740}
   - component: {fileID: 7834229594265313190}
+  - component: {fileID: 314397925426823015}
+  - component: {fileID: 9208766261887663613}
   m_Layer: 9
   m_Name: F4U_RRocket_03_Geo
   m_TagString: Untagged
@@ -2535,11 +2604,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7847690208972227630}
   m_LocalRotation: {x: -0.7010574, y: -0.09229595, z: 0.09229595, w: 0.7010574}
-  m_LocalPosition: {x: 8.004512, y: 2.3398998, z: 2.8128994}
-  m_LocalScale: {x: 0.055983342, y: 0.05598335, z: 0.055983342}
+  m_LocalPosition: {x: 2.4013536, y: 0.7019701, z: 0.8438721}
+  m_LocalScale: {x: 0.016795004, y: 0.016795006, z: 0.016795004}
   m_Children: []
-  m_Father: {fileID: 7846695820757022412}
-  m_RootOrder: 6
+  m_Father: {fileID: 3222181044240664554}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7826449105482562740
 MeshFilter:
@@ -2587,6 +2656,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &314397925426823015
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7847690208972227630}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &9208766261887663613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7847690208972227630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a287742e4368c4a9e7a4ed06a93467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionRange: 10
+  Damage: 20
+  ExplosionType: 0
+  Mask:
+    serializedVersion: 2
+    m_Bits: 0
+  PoolType: 0
+  key: 32
 --- !u!1 &7847706260164586374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,6 +2703,8 @@ GameObject:
   - component: {fileID: 7852879176340753926}
   - component: {fileID: 7826875094802145220}
   - component: {fileID: 7834411337444252300}
+  - component: {fileID: 8319378633259013369}
+  - component: {fileID: 997985406573209451}
   m_Layer: 9
   m_Name: F4U_LRocket_01_Geo
   m_TagString: Untagged
@@ -2613,11 +2720,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7847706260164586374}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -6.185414, y: 2.0145707, z: 2.8128994}
-  m_LocalScale: {x: 0.05598335, y: 0.05598338, z: 0.05598338}
+  m_LocalPosition: {x: -1.8556242, y: 0.6043713, z: 0.8438721}
+  m_LocalScale: {x: 0.016795006, y: 0.01679503, z: 0.01679503}
   m_Children: []
-  m_Father: {fileID: 7846695820757022412}
-  m_RootOrder: 1
+  m_Father: {fileID: 3222181044240664554}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7826875094802145220
 MeshFilter:
@@ -2665,6 +2772,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &8319378633259013369
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7847706260164586374}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &997985406573209451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7847706260164586374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a287742e4368c4a9e7a4ed06a93467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionRange: 10
+  Damage: 20
+  ExplosionType: 0
+  Mask:
+    serializedVersion: 2
+    m_Bits: 0
+  PoolType: 0
+  key: 32
 --- !u!1 &7847709708305021746
 GameObject:
   m_ObjectHideFlags: 0
@@ -3081,14 +3224,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7846635400884173056}
-  - {fileID: 7852879176340753926}
-  - {fileID: 7846736062493271488}
-  - {fileID: 7852842370481569234}
-  - {fileID: 7846546970775385764}
-  - {fileID: 7852852776554926096}
-  - {fileID: 7846578044261551068}
+  m_Children: []
   m_Father: {fileID: 7846638551169798652}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3108,6 +3244,7 @@ GameObject:
   - component: {fileID: 1226408228808438133}
   - component: {fileID: 3287720209613900623}
   - component: {fileID: 727118205181353554}
+  - component: {fileID: 3562418518884232770}
   m_Layer: 9
   m_Name: Airplane - F4U Corsair (Fighter)
   m_TagString: Player
@@ -3133,6 +3270,7 @@ Transform:
   - {fileID: 3287720209635075336}
   - {fileID: 3287720210342250922}
   - {fileID: 3287720211092247949}
+  - {fileID: 1423368634811084106}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3403,6 +3541,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0d6144e4e1d574ab83bd225e255203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3562418518884232770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7848476872339055953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e786f6adb28c264f8f2a23ca1428a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BombsList: []
+  RocketList: []
 --- !u!1 &7848767741131544856
 GameObject:
   m_ObjectHideFlags: 0
@@ -3842,6 +3994,8 @@ GameObject:
   - component: {fileID: 7846546970775385764}
   - component: {fileID: 7826379028725138888}
   - component: {fileID: 7834222049314308168}
+  - component: {fileID: 1615466854673533448}
+  - component: {fileID: 2330391057087768062}
   m_Layer: 9
   m_Name: F4U_RRocket_01_Geo
   m_TagString: Untagged
@@ -3857,11 +4011,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7849076393759107486}
   m_LocalRotation: {x: -0.7010574, y: -0.09229595, z: 0.09229595, w: 0.7010574}
-  m_LocalPosition: {x: 6.1852994, y: 2.0145707, z: 2.8128994}
-  m_LocalScale: {x: 0.055983342, y: 0.05598335, z: 0.055983342}
+  m_LocalPosition: {x: 1.8555899, y: 0.6043713, z: 0.8438721}
+  m_LocalScale: {x: 0.016795004, y: 0.016795006, z: 0.016795004}
   m_Children: []
-  m_Father: {fileID: 7846695820757022412}
-  m_RootOrder: 4
+  m_Father: {fileID: 3222181044240664554}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7826379028725138888
 MeshFilter:
@@ -3909,6 +4063,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &1615466854673533448
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849076393759107486}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2330391057087768062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849076393759107486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a287742e4368c4a9e7a4ed06a93467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionRange: 10
+  Damage: 20
+  ExplosionType: 0
+  Mask:
+    serializedVersion: 2
+    m_Bits: 0
+  PoolType: 0
+  key: 32
 --- !u!1 &7849085795646255342
 GameObject:
   m_ObjectHideFlags: 0
@@ -4232,6 +4422,8 @@ GameObject:
   - component: {fileID: 7846635400884173056}
   - component: {fileID: 7826716358318704812}
   - component: {fileID: 7834490800052017348}
+  - component: {fileID: 769826317505766169}
+  - component: {fileID: 8112455474678332019}
   m_Layer: 9
   m_Name: F4U_Bomb_geo
   m_TagString: Untagged
@@ -4247,10 +4439,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7849159007493197978}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.000057685287, y: 1.549529, z: 2.7830994}
-  m_LocalScale: {x: 0.05598335, y: 0.05598338, z: 0.05598338}
+  m_LocalPosition: {x: -0.000017305587, y: 0.46485877, z: 0.8348999}
+  m_LocalScale: {x: 0.016795006, y: 0.01679503, z: 0.01679503}
   m_Children: []
-  m_Father: {fileID: 7846695820757022412}
+  m_Father: {fileID: 7754285324764162688}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7826716358318704812
@@ -4299,6 +4491,41 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &769826317505766169
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849159007493197978}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8112455474678332019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849159007493197978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2e82c4e2a00f14d8b18e43785a2207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionRange: 10
+  Damage: 20
+  ExplosionType: 0
+  Mask:
+    serializedVersion: 2
+    m_Bits: 0
+  PoolType: 0
 --- !u!1 &7849193842413827498
 GameObject:
   m_ObjectHideFlags: 0
@@ -4365,6 +4592,8 @@ GameObject:
   - component: {fileID: 7846736062493271488}
   - component: {fileID: 7826969175017752864}
   - component: {fileID: 7836040714847559196}
+  - component: {fileID: 4612356231921181291}
+  - component: {fileID: 8994534746451565564}
   m_Layer: 9
   m_Name: F4U_LRocket_02_Geo
   m_TagString: Untagged
@@ -4380,11 +4609,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7849200927878062558}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -7.0891943, y: 2.1740966, z: 2.8128994}
-  m_LocalScale: {x: 0.05598335, y: 0.05598338, z: 0.05598338}
+  m_LocalPosition: {x: -2.1267583, y: 0.6522291, z: 0.8438721}
+  m_LocalScale: {x: 0.016795006, y: 0.01679503, z: 0.01679503}
   m_Children: []
-  m_Father: {fileID: 7846695820757022412}
-  m_RootOrder: 2
+  m_Father: {fileID: 3222181044240664554}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7826969175017752864
 MeshFilter:
@@ -4432,6 +4661,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &4612356231921181291
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849200927878062558}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8994534746451565564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849200927878062558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a287742e4368c4a9e7a4ed06a93467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionRange: 10
+  Damage: 20
+  ExplosionType: 0
+  Mask:
+    serializedVersion: 2
+    m_Bits: 0
+  PoolType: 0
+  key: 32
 --- !u!1 &7849209206311609202
 GameObject:
   m_ObjectHideFlags: 0
@@ -5067,6 +5332,8 @@ GameObject:
   - component: {fileID: 7852852776554926096}
   - component: {fileID: 7826221554194609262}
   - component: {fileID: 7834275314485453682}
+  - component: {fileID: 397883886029467771}
+  - component: {fileID: 5863443173773812736}
   m_Layer: 9
   m_Name: F4U_RRocket_02_Geo
   m_TagString: Untagged
@@ -5082,11 +5349,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7849308215659546212}
   m_LocalRotation: {x: -0.7010574, y: -0.09229595, z: 0.09229595, w: 0.7010574}
-  m_LocalPosition: {x: 7.08908, y: 2.1740966, z: 2.8128994}
-  m_LocalScale: {x: 0.055983342, y: 0.05598335, z: 0.055983342}
+  m_LocalPosition: {x: 2.126724, y: 0.6522291, z: 0.8438721}
+  m_LocalScale: {x: 0.016795004, y: 0.016795006, z: 0.016795004}
   m_Children: []
-  m_Father: {fileID: 7846695820757022412}
-  m_RootOrder: 5
+  m_Father: {fileID: 3222181044240664554}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7826221554194609262
 MeshFilter:
@@ -5134,6 +5401,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &397883886029467771
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849308215659546212}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &5863443173773812736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849308215659546212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a287742e4368c4a9e7a4ed06a93467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionRange: 10
+  Damage: 20
+  ExplosionType: 0
+  Mask:
+    serializedVersion: 2
+    m_Bits: 0
+  PoolType: 0
+  key: 32
 --- !u!1 &7849421099818666836
 GameObject:
   m_ObjectHideFlags: 0
@@ -5349,6 +5652,8 @@ GameObject:
   - component: {fileID: 7852842370481569234}
   - component: {fileID: 7826627436417442924}
   - component: {fileID: 7836015570892813906}
+  - component: {fileID: 3601270185604517769}
+  - component: {fileID: 3248161376403955562}
   m_Layer: 9
   m_Name: F4U_LRocket_03_Geo
   m_TagString: Untagged
@@ -5364,11 +5669,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7849521997658711074}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -8.004621, y: 2.3398998, z: 2.8128994}
-  m_LocalScale: {x: 0.05598335, y: 0.05598338, z: 0.05598338}
+  m_LocalPosition: {x: -2.4013863, y: 0.7019701, z: 0.8438721}
+  m_LocalScale: {x: 0.016795006, y: 0.01679503, z: 0.01679503}
   m_Children: []
-  m_Father: {fileID: 7846695820757022412}
-  m_RootOrder: 3
+  m_Father: {fileID: 3222181044240664554}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7826627436417442924
 MeshFilter:
@@ -5416,6 +5721,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &3601270185604517769
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849521997658711074}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3248161376403955562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849521997658711074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a287742e4368c4a9e7a4ed06a93467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionRange: 10
+  Damage: 20
+  ExplosionType: 0
+  Mask:
+    serializedVersion: 2
+    m_Bits: 0
+  PoolType: 0
+  key: 32
 --- !u!1 &7849583243781326000
 GameObject:
   m_ObjectHideFlags: 0
@@ -6275,6 +6616,38 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &8885796815676441734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1423368634811084106}
+  m_Layer: 9
+  m_Name: Weapons_Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1423368634811084106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8885796815676441734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7754285324764162688}
+  - {fileID: 3222181044240664554}
+  m_Father: {fileID: 7848476872339055952}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9059304020628015431
 GameObject:
   m_ObjectHideFlags: 0

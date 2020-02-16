@@ -1,6 +1,6 @@
 ﻿namespace FlightPhysics.War.Explosives
 {
-    public class Bomb : Explosive
+    public class Bomb : Weapon
     {
 
     }
