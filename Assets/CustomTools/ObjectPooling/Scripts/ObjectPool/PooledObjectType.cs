@@ -1,6 +1,5 @@
 ﻿public enum PooledObjectType
 {
-    Cube=0,
-    Sphere=10,
-    CubeAndSphere=20
+    F4URocket,
+    F4UBomb
 }

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
@@ -66,7 +65,7 @@ public class ObjectPooler : MonoBehaviour
 
         GameObject objToSpawn;
 
-        if(PoolDictionary[tag].Count!=0)
+        if (PoolDictionary[tag].Count != 0)
         {
             objToSpawn = PoolDictionary[tag].Peek();
             objToSpawn.SetActive(true);
@@ -87,7 +86,7 @@ public class ObjectPooler : MonoBehaviour
         return objToSpawn;
     }
 
-    public void Despawn(PooledObjectType tag,GameObject obj)
+    public void Despawn(PooledObjectType tag, GameObject obj)
     {
 
         PoolDictionary[tag].Enqueue(obj);
