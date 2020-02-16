@@ -2587,8 +2587,6 @@ GameObject:
   - component: {fileID: 7846578044261551068}
   - component: {fileID: 7826449105482562740}
   - component: {fileID: 7834229594265313190}
-  - component: {fileID: 314397925426823015}
-  - component: {fileID: 9208766261887663613}
   m_Layer: 9
   m_Name: F4U_RRocket_03_Geo
   m_TagString: Untagged
@@ -2656,41 +2654,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &314397925426823015
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7847690208972227630}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &9208766261887663613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7847690208972227630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a287742e4368c4a9e7a4ed06a93467, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExplosionRange: 10
-  Damage: 20
-  ExplosionType: 0
-  Mask:
-    serializedVersion: 2
-    m_Bits: 0
-  PoolType: 0
 --- !u!1 &7847706260164586374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,8 +2665,6 @@ GameObject:
   - component: {fileID: 7852879176340753926}
   - component: {fileID: 7826875094802145220}
   - component: {fileID: 7834411337444252300}
-  - component: {fileID: 8319378633259013369}
-  - component: {fileID: 997985406573209451}
   m_Layer: 9
   m_Name: F4U_LRocket_01_Geo
   m_TagString: Untagged
@@ -2771,41 +2732,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &8319378633259013369
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7847706260164586374}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &997985406573209451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7847706260164586374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a287742e4368c4a9e7a4ed06a93467, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExplosionRange: 10
-  Damage: 20
-  ExplosionType: 0
-  Mask:
-    serializedVersion: 2
-    m_Bits: 0
-  PoolType: 0
 --- !u!1 &7847709708305021746
 GameObject:
   m_ObjectHideFlags: 0
@@ -3551,15 +3477,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e786f6adb28c264f8f2a23ca1428a04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BombsList:
-  - {fileID: 8112455474678332019}
-  RocketList:
-  - {fileID: 997985406573209451}
-  - {fileID: 8994534746451565564}
-  - {fileID: 3248161376403955562}
-  - {fileID: 2330391057087768062}
-  - {fileID: 5863443173773812736}
-  - {fileID: 9208766261887663613}
+  BombSpawn: {fileID: 7846635400884173056}
+  RocketSpawns:
+  - {fileID: 7852879176340753926}
+  - {fileID: 7846546970775385764}
   FireRocketKey: 282
   FireBombKey: 283
 --- !u!1 &7848767741131544856
@@ -4001,8 +3922,6 @@ GameObject:
   - component: {fileID: 7846546970775385764}
   - component: {fileID: 7826379028725138888}
   - component: {fileID: 7834222049314308168}
-  - component: {fileID: 1615466854673533448}
-  - component: {fileID: 2330391057087768062}
   m_Layer: 9
   m_Name: F4U_RRocket_01_Geo
   m_TagString: Untagged
@@ -4070,41 +3989,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &1615466854673533448
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7849076393759107486}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &2330391057087768062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7849076393759107486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a287742e4368c4a9e7a4ed06a93467, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExplosionRange: 10
-  Damage: 20
-  ExplosionType: 0
-  Mask:
-    serializedVersion: 2
-    m_Bits: 0
-  PoolType: 0
 --- !u!1 &7849085795646255342
 GameObject:
   m_ObjectHideFlags: 0
@@ -4428,8 +4312,6 @@ GameObject:
   - component: {fileID: 7846635400884173056}
   - component: {fileID: 7826716358318704812}
   - component: {fileID: 7834490800052017348}
-  - component: {fileID: 769826317505766169}
-  - component: {fileID: 8112455474678332019}
   m_Layer: 9
   m_Name: F4U_Bomb_geo
   m_TagString: Untagged
@@ -4497,41 +4379,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &769826317505766169
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7849159007493197978}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &8112455474678332019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7849159007493197978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea2e82c4e2a00f14d8b18e43785a2207, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExplosionRange: 10
-  Damage: 20
-  ExplosionType: 0
-  Mask:
-    serializedVersion: 2
-    m_Bits: 0
-  PoolType: 0
 --- !u!1 &7849193842413827498
 GameObject:
   m_ObjectHideFlags: 0
@@ -4598,8 +4445,6 @@ GameObject:
   - component: {fileID: 7846736062493271488}
   - component: {fileID: 7826969175017752864}
   - component: {fileID: 7836040714847559196}
-  - component: {fileID: 4612356231921181291}
-  - component: {fileID: 8994534746451565564}
   m_Layer: 9
   m_Name: F4U_LRocket_02_Geo
   m_TagString: Untagged
@@ -4667,41 +4512,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4612356231921181291
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7849200927878062558}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &8994534746451565564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7849200927878062558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a287742e4368c4a9e7a4ed06a93467, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExplosionRange: 10
-  Damage: 20
-  ExplosionType: 0
-  Mask:
-    serializedVersion: 2
-    m_Bits: 0
-  PoolType: 0
 --- !u!1 &7849209206311609202
 GameObject:
   m_ObjectHideFlags: 0
@@ -5337,8 +5147,6 @@ GameObject:
   - component: {fileID: 7852852776554926096}
   - component: {fileID: 7826221554194609262}
   - component: {fileID: 7834275314485453682}
-  - component: {fileID: 397883886029467771}
-  - component: {fileID: 5863443173773812736}
   m_Layer: 9
   m_Name: F4U_RRocket_02_Geo
   m_TagString: Untagged
@@ -5406,41 +5214,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &397883886029467771
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7849308215659546212}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &5863443173773812736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7849308215659546212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a287742e4368c4a9e7a4ed06a93467, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExplosionRange: 10
-  Damage: 20
-  ExplosionType: 0
-  Mask:
-    serializedVersion: 2
-    m_Bits: 0
-  PoolType: 0
 --- !u!1 &7849421099818666836
 GameObject:
   m_ObjectHideFlags: 0
@@ -5656,8 +5429,6 @@ GameObject:
   - component: {fileID: 7852842370481569234}
   - component: {fileID: 7826627436417442924}
   - component: {fileID: 7836015570892813906}
-  - component: {fileID: 3601270185604517769}
-  - component: {fileID: 3248161376403955562}
   m_Layer: 9
   m_Name: F4U_LRocket_03_Geo
   m_TagString: Untagged
@@ -5725,41 +5496,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3601270185604517769
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7849521997658711074}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &3248161376403955562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7849521997658711074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a287742e4368c4a9e7a4ed06a93467, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExplosionRange: 10
-  Damage: 20
-  ExplosionType: 0
-  Mask:
-    serializedVersion: 2
-    m_Bits: 0
-  PoolType: 0
 --- !u!1 &7849583243781326000
 GameObject:
   m_ObjectHideFlags: 0

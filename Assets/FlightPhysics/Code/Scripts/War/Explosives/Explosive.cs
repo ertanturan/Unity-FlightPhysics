@@ -22,7 +22,7 @@ namespace FlightPhysics.War.Explosives
 
         }
 
-        public void Init()
+        public virtual void Init()
         {
             if (!Rb)
             {
@@ -30,12 +30,12 @@ namespace FlightPhysics.War.Explosives
             }
         }
 
-        public void OnObjectSpawn()
+        public virtual void OnObjectSpawn()
         {
             Rb.AddForce(transform.forward * 10);
         }
 
-        public void OnObjectDespawn()
+        public virtual void OnObjectDespawn()
         {
 
         }

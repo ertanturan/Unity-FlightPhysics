@@ -1,17 +1,22 @@
-﻿namespace FlightPhysics.War.Explosives
+﻿using UnityEngine;
+
+namespace FlightPhysics.War.Explosives
 {
 
     public class StraightRocket : Rocket
     {
-        public override void Explode()
+        public override void Init()
         {
-            base.Explode();
+            base.Init();
+            Rb.velocity = Vector3.zero;
+            Rb.AddForce(transform.forward * 200);
+
         }
 
-        public override void Fire()
+        void FixedUpdate()
         {
-            base.Fire();
-            Rb.AddForce(transform.forward * 100);
+            Debug.DrawRay(transform.position, transform.forward * 20, Color.red);
+            Rb.AddForce(transform.forward * 200);
         }
     }
 }
