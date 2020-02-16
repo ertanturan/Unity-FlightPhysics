@@ -3,4 +3,5 @@
     void Init();
     void OnObjectSpawn();
     void OnObjectDespawn();
+    void Despawn();
 }

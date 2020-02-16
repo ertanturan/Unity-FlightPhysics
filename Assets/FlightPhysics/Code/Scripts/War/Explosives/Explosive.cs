@@ -40,6 +40,10 @@ namespace FlightPhysics.War.Explosives
 
         }
 
+        public void Despawn()
+        {
+            ObjectPooler.Instance.Despawn(PoolType, gameObject);
+        }
     }
 
 

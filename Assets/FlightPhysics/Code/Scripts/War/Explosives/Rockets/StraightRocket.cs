@@ -3,9 +3,15 @@
 
     public class StraightRocket : Rocket
     {
-        protected virtual void FixedUpdate()
+        public override void Explode()
         {
+            base.Explode();
+        }
 
+        public override void Fire()
+        {
+            base.Fire();
+            Rb.AddForce(transform.forward * 100);
         }
     }
 }

@@ -25,6 +25,8 @@ public class PooledObject : MonoBehaviour, IPooledObject
 
     }
 
-
-
+    public void Despawn()
+    {
+        ObjectPooler.Instance.Despawn(Type, gameObject);
+    }
 }
