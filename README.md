@@ -11,3 +11,5 @@ All weight related calculations are using 'pounds' instead of kilos. And, conver
 Thrust, Drag , Lift and the Gravity.
 
 `Screenshots will be added here`
+
+# War Mechanics
