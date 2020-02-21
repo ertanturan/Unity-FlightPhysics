@@ -13,3 +13,4 @@ Thrust, Drag , Lift and the Gravity.
 `Screenshots will be added here`
 
 # War Mechanics
+`Bomb and Rocket info will be here`
