@@ -20,7 +20,7 @@ public class InfoPanel : MonoBehaviour
     {
         Pitch.text = Input.Pitch.ToString();
         Yaw.text = Input.Yaw.ToString();
-        Roll.text = Input.Yaw.ToString();
+        Roll.text = Input.Roll.ToString();
         Throttle.text = Input.Throttle.ToString();
         StickyThrottle.text = Input.StickyThrottle.ToString();
         Flaps.text = Input.Flaps.ToString();
