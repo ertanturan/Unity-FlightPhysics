@@ -1,18 +1,5 @@
 # A Real Physics Based Flight Simulator
 
-# Simulated Forces & Calculation
+# YOUTUBE VIDEO
 
-## Weight
-
-All weight related calculations are using 'pounds' instead of kilos. And, converting pounds to kilos when adding mass to rigidbody.
-
-## Four Forces
-
-Thrust, Drag , Lift and the Gravity.
-
-`Screenshots will be added here`
-
-# War Mechanics
-`Bomb and Rocket info will be here`
-
-# This Repo is still under development so please consider it before downloading/forking.
+[![Flight Physics](http://img.youtube.com/vi/XFsG60aaNnU/0.jpg)](http://www.youtube.com/watch?v=XFsG60aaNnU "Flight Physics")
