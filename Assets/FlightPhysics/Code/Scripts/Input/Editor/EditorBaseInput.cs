@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using FlightPhysics.Input;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 namespace FlightPhysics.Input
